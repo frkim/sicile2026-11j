@@ -345,7 +345,15 @@ function buildStopPopup(stop, index) {
     .filter(Boolean);
 
   const typeLabel = stop.type === "night" ? "🌙 Nuit" : "📍 Visite";
-  const orderLabel = `Etape ${index + 1} / ${itinerary.mapStops.length}`;
+  const total = itinerary.mapStops.length;
+  const orderLabel = `Etape ${index + 1} / ${total}`;
+  const prevIndex = (index - 1 + total) % total;
+  const nextIndex = (index + 1) % total;
+  const nav = `
+    <span class="trip-map-popup-nav">
+      <button type="button" class="trip-map-popup-navbtn" data-stop-nav="${prevIndex}" aria-label="Etape précédente">◀</button>
+      <button type="button" class="trip-map-popup-navbtn" data-stop-nav="${nextIndex}" aria-label="Etape suivante">▶</button>
+    </span>`;
 
   const media = days.length && dayImageMeta[days[0].day]
     ? dayImageMeta[days[0].day]
@@ -387,7 +395,7 @@ function buildStopPopup(stop, index) {
   const gmaps = `https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`;
 
   return `
-    <article class="trip-map-popup">
+    <article class="trip-map-popup" data-stop-index="${index}">
       ${media ? `
         <figure class="trip-map-popup-media">
           <img src="${media.image}" alt="${escapeHtml(media.landmark)}" loading="lazy" data-zoom-src="${media.image}" data-zoom-caption="${escapeHtml(stop.name)} - ${escapeHtml(media.landmark)}" />
@@ -395,7 +403,10 @@ function buildStopPopup(stop, index) {
         </figure>
       ` : ""}
       <header>
-        <span class="trip-map-popup-eyebrow">${typeLabel} · ${orderLabel}</span>
+        <div class="trip-map-popup-eyebrow-row">
+          <span class="trip-map-popup-eyebrow">${typeLabel} · ${orderLabel}</span>
+          ${nav}
+        </div>
         <h4>${escapeHtml(stop.name)}</h4>
         <span class="trip-map-popup-day-range">${escapeHtml(stop.day)}</span>
       </header>
@@ -436,6 +447,7 @@ function renderMap() {
     lineJoin: "round",
   }).addTo(map);
 
+  const markers = [];
   itinerary.mapStops.forEach((stop, index) => {
     const label = stop.type === "night" ? "🌙" : "📍";
     const marker = L.marker([stop.lat, stop.lng], {
@@ -444,10 +456,61 @@ function renderMap() {
     }).addTo(map);
 
     marker.bindPopup(buildStopPopup(stop, index), {
-      maxWidth: 320,
-      minWidth: 260,
+      maxWidth: 400,
+      minWidth: 340,
       className: "trip-map-popup-wrapper",
     });
+    markers.push(marker);
+  });
+
+  let currentStopIndex = -1;
+
+  map.on("popupopen", (e) => {
+    const root = e.popup.getElement();
+    if (!root) return;
+    const article = root.querySelector("[data-stop-index]");
+    if (article) {
+      currentStopIndex = parseInt(article.getAttribute("data-stop-index"), 10);
+    }
+    root.querySelectorAll("[data-stop-nav]").forEach((btn) => {
+      btn.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        const target = parseInt(btn.getAttribute("data-stop-nav"), 10);
+        gotoStop(target);
+      });
+    });
+  });
+
+  map.on("popupclose", () => {
+    currentStopIndex = -1;
+  });
+
+  function gotoStop(target) {
+    const m = markers[target];
+    if (!m) return;
+    map.closePopup();
+    map.panTo(m.getLatLng(), { animate: true });
+    m.openPopup();
+  }
+
+  document.addEventListener("keydown", (ev) => {
+    if (currentStopIndex < 0) return;
+    // Don't hijack keys while lightbox is open or user is typing
+    const lb = document.getElementById("lightbox");
+    if (lb && !lb.hidden) return;
+    const tag = (ev.target && ev.target.tagName) || "";
+    if (/^(INPUT|TEXTAREA|SELECT)$/.test(tag)) return;
+    const total = markers.length;
+    if (ev.key === "ArrowRight") {
+      ev.preventDefault();
+      gotoStop((currentStopIndex + 1) % total);
+    } else if (ev.key === "ArrowLeft") {
+      ev.preventDefault();
+      gotoStop((currentStopIndex - 1 + total) % total);
+    } else if (ev.key === "Escape") {
+      ev.preventDefault();
+      map.closePopup();
+    }
   });
 
   map.fitBounds(path.getBounds(), {

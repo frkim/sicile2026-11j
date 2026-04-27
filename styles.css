@@ -409,7 +409,7 @@ a {
 
 .trip-map {
   width: 100%;
-  height: 560px;
+  height: 760px;
   border-radius: 22px;
   overflow: hidden;
   border: 1px solid rgba(78, 101, 118, 0.12);
@@ -501,7 +501,7 @@ a {
 
 .trip-map-popup-wrapper .leaflet-popup-content {
   margin: 0;
-  width: 280px !important;
+  width: 360px !important;
 }
 
 .trip-map-popup {
@@ -554,6 +554,46 @@ a {
   flex-direction: column;
   gap: 2px;
   padding-top: 10px;
+}
+
+.trip-map-popup-eyebrow-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.trip-map-popup-nav {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.trip-map-popup-navbtn {
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(78, 101, 118, 0.18);
+  background: #fff;
+  color: var(--teal-700);
+  font-size: 0.7rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.15s ease, transform 0.15s ease, color 0.15s ease;
+}
+
+.trip-map-popup-navbtn:hover {
+  background: linear-gradient(135deg, #2f7f97, #c65c35);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.trip-map-popup-navbtn:focus-visible {
+  outline: 2px solid var(--teal-700);
+  outline-offset: 2px;
 }
 
 .trip-map-popup-eyebrow {
@@ -1525,7 +1565,7 @@ td strong {
   }
 
   .trip-map-popup-wrapper .leaflet-popup-content {
-    width: 260px !important;
+    width: 280px !important;
   }
 
   .trip-map-popup-media img {
