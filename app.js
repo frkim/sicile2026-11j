@@ -277,6 +277,25 @@ const filters = [
   { key: "logistique", label: "🧭 Logistique" },
 ];
 
+const themeMeta = {
+  culture: { icon: "🏛️", label: "Culture" },
+  plage: { icon: "🏖️", label: "Plages" },
+  nature: { icon: "🌿", label: "Nature" },
+  route: { icon: "🚗", label: "Trajets" },
+  logistique: { icon: "🧭", label: "Logistique" },
+  panorama: { icon: "🌅", label: "Panorama" },
+  aventure: { icon: "🥾", label: "Aventure" },
+  gastronomie: { icon: "🍝", label: "Gastronomie" },
+};
+
+function themeIcon(key) {
+  return (themeMeta[key] && themeMeta[key].icon) || "🏷️";
+}
+
+function themeLabel(key) {
+  return (themeMeta[key] && themeMeta[key].label) || key;
+}
+
 let activeFilter = "all";
 
 const heroKpis = document.querySelector("#hero-kpis");
@@ -296,6 +315,100 @@ function createMapIcon(type, label) {
     iconAnchor: [19, 19],
     popupAnchor: [0, -14],
   });
+}
+
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function getStopDayNumbers(stop) {
+  const matches = String(stop.day).match(/\d+/g);
+  if (!matches) return [];
+  const nums = matches.map(Number);
+  if (nums.length === 2) {
+    const [a, b] = nums;
+    const range = [];
+    for (let i = a; i <= b; i++) range.push(i);
+    return range;
+  }
+  return nums;
+}
+
+function buildStopPopup(stop, index) {
+  const dayNums = getStopDayNumbers(stop);
+  const days = dayNums
+    .map((n) => itinerary.days.find((d) => d.day === n))
+    .filter(Boolean);
+
+  const typeLabel = stop.type === "night" ? "🌙 Nuit" : "📍 Visite";
+  const orderLabel = `Etape ${index + 1} / ${itinerary.mapStops.length}`;
+
+  const media = days.length && dayImageMeta[days[0].day]
+    ? dayImageMeta[days[0].day]
+    : null;
+
+  let nights = "";
+  if (stop.type === "night" && days.length) {
+    const first = days[0];
+    const last = days[days.length - 1];
+    const nightCount = days.length;
+    nights = `<div class="trip-map-popup-row">🛏️ <strong>${nightCount} nuit${nightCount > 1 ? "s" : ""}</strong> <span>${first.date}${last !== first ? ` → ${last.date}` : ""}</span></div>`;
+  }
+
+  const programs = days
+    .map((d) => {
+      const items = d.items
+        .slice(0, 3)
+        .map((it) => `<li>${escapeHtml(it)}</li>`)
+        .join("");
+      return `
+        <div class="trip-map-popup-day">
+          <div class="trip-map-popup-day-head">
+            <span class="trip-map-popup-chip">J${d.day}</span>
+            <strong>${escapeHtml(d.title)}</strong>
+          </div>
+          <ul>${items}</ul>
+        </div>
+      `;
+    })
+    .join("");
+
+  const themes = days.length
+    ? `<div class="trip-map-popup-tags">${[...new Set(days.flatMap((d) => d.themes))]
+        .map((t) => `<span>${themeIcon(t)} ${escapeHtml(themeLabel(t))}</span>`)
+        .join("")}</div>`
+    : "";
+
+  const coords = `${stop.lat.toFixed(3)}, ${stop.lng.toFixed(3)}`;
+  const gmaps = `https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`;
+
+  return `
+    <article class="trip-map-popup">
+      ${media ? `
+        <figure class="trip-map-popup-media">
+          <img src="${media.image}" alt="${escapeHtml(media.landmark)}" loading="lazy" data-zoom-src="${media.image}" data-zoom-caption="${escapeHtml(stop.name)} - ${escapeHtml(media.landmark)}" />
+          <figcaption>📸 ${escapeHtml(media.landmark)}</figcaption>
+        </figure>
+      ` : ""}
+      <header>
+        <span class="trip-map-popup-eyebrow">${typeLabel} · ${orderLabel}</span>
+        <h4>${escapeHtml(stop.name)}</h4>
+        <span class="trip-map-popup-day-range">${escapeHtml(stop.day)}</span>
+      </header>
+      <p class="trip-map-popup-note">${escapeHtml(stop.note)}</p>
+      ${nights}
+      ${programs ? `<div class="trip-map-popup-programs">${programs}</div>` : ""}
+      ${themes}
+      <footer class="trip-map-popup-footer">
+        <span>📐 ${coords}</span>
+        <a href="${gmaps}" target="_blank" rel="noreferrer">🗺️ Google Maps</a>
+      </footer>
+    </article>
+  `;
 }
 
 function renderMap() {
@@ -324,20 +437,18 @@ function renderMap() {
     lineJoin: "round",
   }).addTo(map);
 
-  itinerary.mapStops.forEach((stop) => {
+  itinerary.mapStops.forEach((stop, index) => {
     const label = stop.type === "night" ? "🌙" : "📍";
     const marker = L.marker([stop.lat, stop.lng], {
       icon: createMapIcon(stop.type, label),
       title: stop.name,
     }).addTo(map);
 
-    marker.bindPopup(`
-      <div class="trip-map-popup">
-        <strong>${stop.name}</strong>
-        <span>${stop.day}</span>
-        <p>${stop.note}</p>
-      </div>
-    `);
+    marker.bindPopup(buildStopPopup(stop, index), {
+      maxWidth: 320,
+      minWidth: 260,
+      className: "trip-map-popup-wrapper",
+    });
   });
 
   map.fitBounds(path.getBounds(), {
@@ -435,29 +546,38 @@ function renderJourney() {
 
       return `
         <article class="journey-card">
-          ${media ? `
-            <figure class="journey-media">
-              <img
-                class="journey-image"
-                src="${media.image}"
-                alt="${media.landmark}"
-                loading="lazy"
-              />
-              <figcaption class="journey-caption">📸 Lieu emblematique : ${media.landmark}</figcaption>
-            </figure>
-          ` : ""}
-          <div class="journey-topline">
-            <span class="journey-day">J${day.day}</span>
-            <div class="tag-row">
-              ${day.themes.map((theme) => `<span class="tag">${theme}</span>`).join("")}
-            </div>
+          <div class="journey-timeline" aria-hidden="true">
+            <span class="journey-node">
+              <strong class="journey-node-day">J${day.day}</strong>
+              <span class="journey-node-date">${day.date}</span>
+            </span>
           </div>
-          <p class="journey-meta">${day.date}</p>
-          <h3>${day.title}</h3>
-          <ul class="journey-list">
-            ${day.items.map((item) => `<li>${item}</li>`).join("")}
-          </ul>
-          ${day.stay !== "—" ? `<span class="stay-pill">Nuit : ${day.stay}</span>` : ""}
+          <div class="journey-card-body">
+            ${media ? `
+              <figure class="journey-media">
+                <button type="button" class="image-zoom-btn" data-zoom-src="${media.image}" data-zoom-caption="J${day.day} - ${media.landmark}" aria-label="Agrandir la photo">
+                  <img
+                    class="journey-image"
+                    src="${media.image}"
+                    alt="${media.landmark}"
+                    loading="lazy"
+                  />
+                  <span class="image-zoom-icon" aria-hidden="true">🔍</span>
+                </button>
+                <figcaption class="journey-caption">📸 Lieu emblematique : ${media.landmark}</figcaption>
+              </figure>
+            ` : ""}
+            <div class="journey-topline">
+              <div class="tag-row">
+                ${day.themes.map((theme) => `<span class="tag"><span class="tag-icon" aria-hidden="true">${themeIcon(theme)}</span>${themeLabel(theme)}</span>`).join("")}
+              </div>
+            </div>
+            <h3>${day.title}</h3>
+            <ul class="journey-list">
+              ${day.items.map((item) => `<li>${item}</li>`).join("")}
+            </ul>
+            ${day.stay !== "—" ? `<span class="stay-pill">Nuit : ${day.stay}</span>` : ""}
+          </div>
         </article>
       `;
     })
@@ -520,3 +640,41 @@ renderRoutes();
 renderStays();
 renderStrengths();
 renderMap();
+
+// Lightbox: clic sur n'importe quelle image avec data-zoom-src
+(function setupLightbox() {
+  const lightbox = document.querySelector("#lightbox");
+  const lightboxImg = document.querySelector("#lightbox-image");
+  const lightboxCap = document.querySelector("#lightbox-caption");
+  const closeBtn = document.querySelector("#lightbox-close");
+  if (!lightbox || !lightboxImg) return;
+
+  function open(src, caption) {
+    lightboxImg.src = src;
+    lightboxImg.alt = caption || "";
+    lightboxCap.textContent = caption || "";
+    lightbox.hidden = false;
+    document.body.style.overflow = "hidden";
+  }
+
+  function close() {
+    lightbox.hidden = true;
+    lightboxImg.src = "";
+    document.body.style.overflow = "";
+  }
+
+  document.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-zoom-src]");
+    if (!trigger) return;
+    event.preventDefault();
+    open(trigger.dataset.zoomSrc, trigger.dataset.zoomCaption || "");
+  });
+
+  closeBtn.addEventListener("click", close);
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) close();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !lightbox.hidden) close();
+  });
+})();
