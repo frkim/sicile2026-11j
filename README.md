@@ -23,19 +23,15 @@ itinéraire jour par jour, carte interactive, trajets, hébergements et logistiq
 
 ## Lancer en local
 
-Le site utilise `<base href="/sicile2026-11j/" />`, il doit donc être servi sous ce chemin.
+Tous les chemins sont relatifs : il suffit d'ouvrir le site avec n'importe quel serveur statique.
+
+- **VS Code** — extension *Live Server*, clic droit sur `index.html` → *Open with Live Server*.
+- **Python** :
 
 ```powershell
-# Depuis la racine du repo
 python -m http.server 8000
-# puis ouvrir : http://localhost:8000/sicile2026-11j/
+# puis ouvrir : http://localhost:8000/
 ```
-
-Astuce : créer un dossier parent et y placer le repo sous le nom `sicile2026-11j/`,
-puis lancer le serveur depuis ce parent.
-
-Alternative (sans contrainte de chemin) — éditer temporairement `index.html` et
-remplacer `<base href="/sicile2026-11j/" />` par `<base href="./" />`.
 
 ## Fonctionnalités
 
