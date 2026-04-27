@@ -82,22 +82,23 @@
 - 🥾 Randonnée vers les cratères sommitaux avec guide
 - Paysages lunaires, coulées de lave, vues panoramiques
 - 🍽️ Déjeuner au refuge
-- 🚗 **Rifugio Sapienza** → **Catane** · ⏱️ 1h15 (1h GPS + marge) · ~35 km
+- 🚗 **Rifugio Sapienza** → **Taormine** · ⏱️ 1h30 (1h15 GPS + marge) · ~50 km (retour)
 
-> 🏨 **Nuit 6 : Catane**
+> 🏨 **Nuit 6 : Taormine**
 
 ---
 
-## 🐟 Jour 7 · Lun. 17 août – Catane → Syracuse
+## 🐟 Jour 7 · Lun. 17 août – Taormine → Syracuse (via Catane)
 
-- Matin : visite de **Catane** (marché aux poissons, Via Etnea, Piazza Duomo)
+- 🚗 **Taormine** → **Catane** · ⏱️ 1h15 (1h GPS + marge) · ~50 km
+  - Arrêt visite de **Catane** (marché aux poissons, Via Etnea, Piazza Duomo)
 - 🚗 **Catane** → **Syracuse** · ⏱️ 1h15 (1h GPS + marge) · ~60 km (E45)
 
 > 🏨 **Nuit 7 : Syracuse**
 
 ---
 
-## 🌅 Jour 8 · Mar. 18 août – Syracuse + Noto
+## 🌅 Jour 8 · Mar. 18 août – Syracuse + Noto (excursion)
 
 - Matin : visite d'**Ortigia** (cœur historique de Syracuse)
   - Piazza Duomo, cathédrale, temple d'Athéna
@@ -108,14 +109,15 @@
   - Corso Vittorio Emanuele, cathédrale San Nicolò (UNESCO)
   - Palazzo Nicolaci (balcons sculptés)
 - 🌊 Option : plage de **Lido di Noto** ou **Calamosche** (réserve naturelle, criques sauvages)
+- 🚗 **Noto** → **Syracuse** · ⏱️ 45 min (35 min GPS + marge) · ~33 km (retour)
 
-> 🏨 **Nuit 8 : Noto / alentours**
+> 🏨 **Nuit 8 : Syracuse**
 
 ---
 
 ## 🍫 Jour 9 · Mer. 19 août – Modica + Raguse
 
-- 🚗 **Noto** → **Modica** · ⏱️ 50 min (40 min GPS + marge) · ~36 km
+- 🚗 **Syracuse** → **Modica** · ⏱️ 1h30 (1h15 GPS + marge) · ~70 km
   - Dégustation du célèbre **chocolat de Modica** (Antica Dolceria Bonajuto)
   - Chiesa di San Giorgio (escalier monumental)
   - Balade dans Modica Bassa et Modica Alta
@@ -202,10 +204,12 @@
 | 2 | Palerme → Cefalù | 1h | 1h15 | ~70 km |
 | 4 | Cefalù → Taormine | 2h15 | 2h45 | ~165 km |
 | 6 | Taormine → Rifugio Sapienza (Etna Sud) | 1h15 | 1h30 | ~50 km |
-| 6 | Rifugio Sapienza → Catane | 1h | 1h15 | ~35 km |
+| 6 | Rifugio Sapienza → Taormine (retour) | 1h15 | 1h30 | ~50 km |
+| 7 | Taormine → Catane (arrêt) | 1h | 1h15 | ~50 km |
 | 7 | Catane → Syracuse | 1h | 1h15 | ~60 km |
-| 8 | Syracuse → Noto | 35 min | 45 min | ~33 km |
-| 9 | Noto → Modica | 40 min | 50 min | ~36 km |
+| 8 | Syracuse → Noto (A/R) | 35 min | 45 min | ~33 km |
+| 8 | Noto → Syracuse (retour) | 35 min | 45 min | ~33 km |
+| 9 | Syracuse → Modica | 1h15 | 1h30 | ~70 km |
 | 9 | Modica → Raguse | 20 min | 30 min | ~16 km |
 | 10 | Raguse → Agrigente | 2h | 2h30 | ~130 km |
 | 11 | Agrigente → Scala dei Turchi (Realmonte) | 20 min | 25 min | ~15 km |
@@ -214,3 +218,16 @@
 | 12 | Riserva dello Zingaro → Palerme (aéroport) | 1h | 1h15 | ~55 km |
 
 > ⚠️ *Estimé = durée GPS + marge pour pauses, circulation (août), routes sinueuses siciliennes*
+
+## 🏨 Récapitulatif hébergements (8 réservations Airbnb · 12 nuits)
+
+| # | Ville | Dates | Nuits | Check-in | Check-out |
+|:-:|-------|-------|:-----:|----------|-----------|
+| 1 | **Palerme** | Mar. 11 août | 1 | 11 août | 12 août |
+| 2 | **Cefalù** | Mer. 12 – Jeu. 13 août | 2 | 12 août | 14 août |
+| 3 | **Taormine** | Ven. 14 – Dim. 16 août | 3 | 14 août | 17 août |
+| 4 | **Syracuse** | Lun. 17 – Mar. 18 août | 2 | 17 août | 19 août |
+| 5 | **Ragusa** | Mer. 19 août | 1 | 19 août | 20 août |
+| 6 | **Agrigente** | Jeu. 20 août | 1 | 20 août | 21 août |
+| 7 | **Trapani** | Ven. 21 août | 1 | 21 août | 22 août |
+| 8 | **Palerme / aéroport** | Sam. 22 août | 1 | 22 août | 23 août |
