@@ -365,10 +365,11 @@ function buildStopPopup(stop, index) {
         .slice(0, 3)
         .map((it) => `<li>${escapeHtml(it)}</li>`)
         .join("");
+      const chip = days.length > 1 ? `<span class="trip-map-popup-chip">J${d.day}</span>` : "";
       return `
         <div class="trip-map-popup-day">
           <div class="trip-map-popup-day-head">
-            <span class="trip-map-popup-chip">J${d.day}</span>
+            ${chip}
             <strong>${escapeHtml(d.title)}</strong>
           </div>
           <ul>${items}</ul>
@@ -383,7 +384,6 @@ function buildStopPopup(stop, index) {
         .join("")}</div>`
     : "";
 
-  const coords = `${stop.lat.toFixed(3)}, ${stop.lng.toFixed(3)}`;
   const gmaps = `https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`;
 
   return `
@@ -404,8 +404,7 @@ function buildStopPopup(stop, index) {
       ${programs ? `<div class="trip-map-popup-programs">${programs}</div>` : ""}
       ${themes}
       <footer class="trip-map-popup-footer">
-        <span>📐 ${coords}</span>
-        <a href="${gmaps}" target="_blank" rel="noreferrer">🗺️ Google Maps</a>
+        <a href="${gmaps}" target="_blank" rel="noreferrer">🗺️ Ouvrir dans Google Maps</a>
       </footer>
     </article>
   `;
