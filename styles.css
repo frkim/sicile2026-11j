@@ -340,6 +340,10 @@ a {
   grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
 }
 
+.intro-grid-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .intro-card {
   border-radius: var(--radius-xl);
   padding: 32px;

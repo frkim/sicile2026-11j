@@ -498,6 +498,7 @@ function renderStays() {
 }
 
 function renderStrengths() {
+  if (!servicePoints) return;
   servicePoints.innerHTML = itinerary.strengths
     .map(
       (item) => `
