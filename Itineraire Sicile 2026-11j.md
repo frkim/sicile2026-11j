@@ -4,6 +4,14 @@
 
 > **📌 Note :** Les durées de trajet indiquées incluent une marge de 15 à 30 min par rapport au temps GPS, pour tenir compte des pauses, de la circulation estivale (août) et des routes sinueuses siciliennes.
 
+## 🗺️ Carte de l'itinéraire
+
+![Carte de l'itineraire en Sicile](carte-itineraire-sicile-2026-inline.svg)
+
+> Carte avec fond de carte Wikimedia Commons : le trace montre les trajets, les marqueurs orange indiquent les villes ou vous dormez, les marqueurs bleus les villes ou sites visites sans nuit.
+
+> Fond de carte source : Eric Gaba (Sting), Wikimedia Commons, licence CC BY-SA 3.0.
+
 ---
 
 ## ✈️ Jour 1 · Mar. 11 août – Arrivée
