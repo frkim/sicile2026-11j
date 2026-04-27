@@ -1,0 +1,93 @@
+[
+  {
+    "day": 1,
+    "file": "day-01.jpg",
+    "title": "Piazza Pretoria",
+    "articleUrl": "https://en.wikipedia.org/wiki/Piazza_Pretoria",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Sicilia_Palermo1_tango7174.jpg"
+  },
+  {
+    "day": 2,
+    "file": "day-02.jpg",
+    "title": "Palazzo dei Normanni",
+    "articleUrl": "https://en.wikipedia.org/wiki/Palazzo_dei_Normanni",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Normandiarren_gaztelua.jpg"
+  },
+  {
+    "day": 3,
+    "file": "day-03.jpg",
+    "title": "Cefalù Cathedral",
+    "articleUrl": "https://en.wikipedia.org/wiki/Cefal%C3%B9_Cathedral",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Duomo_cefalu_msu2017-0797.jpg"
+  },
+  {
+    "day": 4,
+    "file": "day-04.jpg",
+    "title": "Taormina",
+    "articleUrl": "https://en.wikipedia.org/wiki/Taormina",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Aerial_image_of_the_coast_of_Taormina_%28view_from_the_southeast%29.jpg/1280px-Aerial_image_of_the_coast_of_Taormina_%28view_from_the_southeast%29.jpg"
+  },
+  {
+    "day": 5,
+    "file": "day-05.jpg",
+    "title": "Isola Bella (Sicily)",
+    "articleUrl": "https://en.wikipedia.org/wiki/Isola_Bella_(Sicily)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/IsolaBellaView.jpg/1280px-IsolaBellaView.jpg"
+  },
+  {
+    "day": 6,
+    "file": "day-06.jpg",
+    "title": "Mount Etna",
+    "articleUrl": "https://en.wikipedia.org/wiki/Mount_Etna",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Mt_Etna_and_Catania1.jpg"
+  },
+  {
+    "day": 7,
+    "file": "day-07.jpg",
+    "title": "Catania Cathedral",
+    "articleUrl": "https://en.wikipedia.org/wiki/Catania_Cathedral",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Catania_Cathedral_msu2017-9550.jpg"
+  },
+  {
+    "day": 8,
+    "file": "day-08.jpg",
+    "title": "Noto Cathedral",
+    "articleUrl": "https://en.wikipedia.org/wiki/Noto_Cathedral",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/CattedraleNoto-1.jpg/1280px-CattedraleNoto-1.jpg"
+  },
+  {
+    "day": 9,
+    "file": "day-09.jpg",
+    "title": "Ragusa, Sicily",
+    "articleUrl": "https://en.wikipedia.org/wiki/Ragusa,_Sicily",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Ragusa_Ibla%2C_Sicily.jpg/1280px-Ragusa_Ibla%2C_Sicily.jpg"
+  },
+  {
+    "day": 10,
+    "file": "day-10.jpg",
+    "title": "Valle dei Templi",
+    "articleUrl": "https://it.wikipedia.org/wiki/Valle_dei_Templi",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Agrigento_TemplesValley_0066.jpg/1280px-Agrigento_TemplesValley_0066.jpg"
+  },
+  {
+    "day": 11,
+    "file": "day-11.jpg",
+    "title": "Scala dei Turchi",
+    "articleUrl": "https://en.wikipedia.org/wiki/Scala_dei_Turchi",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Realmonte_-_Scala_dei_Turchi_0950.jpg/1280px-Realmonte_-_Scala_dei_Turchi_0950.jpg"
+  },
+  {
+    "day": 12,
+    "file": "day-12.jpg",
+    "title": "Riserva naturale orientata dello Zingaro",
+    "articleUrl": "https://it.wikipedia.org/wiki/Riserva_naturale_orientata_dello_Zingaro",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Zingaro_Sicilia_2005-09-30-1.jpg/1280px-Zingaro_Sicilia_2005-09-30-1.jpg"
+  },
+  {
+    "day": 13,
+    "file": "day-13.jpg",
+    "title": "Aeroporto di Palermo-Punta Raisi",
+    "articleUrl": "https://it.wikipedia.org/wiki/Aeroporto_di_Palermo-Punta_Raisi",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Palermo-Airport-bjs2007-01.jpg/1280px-Palermo-Airport-bjs2007-01.jpg"
+  }
+]

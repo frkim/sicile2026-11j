@@ -13,6 +13,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
@@ -25,21 +31,21 @@
           <a class="brand" href="#top">
             <span class="brand-mark">S</span>
             <span>
-              <strong>Studio Mediterranee</strong>
-              <small>Voyages sur mesure</small>
+              <strong>Studio Mediterranee ✨</strong>
+              <small>Voyages sur mesure 🌍</small>
             </span>
           </a>
           <div class="nav-links">
-            <a href="#experience">Voyage</a>
-            <a href="#journey">Programme</a>
-            <a href="#logistics">Logistique</a>
-            <a href="#stays">Hebergements</a>
+            <a href="#experience">🌅 Voyage</a>
+            <a href="#journey">🗓️ Programme</a>
+            <a href="#logistics">🚗 Logistique</a>
+            <a href="#stays">🏨 Hebergements</a>
           </div>
         </nav>
 
         <section class="hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Road trip premium | 11 au 23 aout 2026</p>
+            <p class="eyebrow">Road trip premium ✈️ | 11 au 23 aout 2026</p>
             <h1>La Sicile comme une grande traversee mediterraneenne.</h1>
             <p class="lead">
               Un itineraire fluide de 12 nuits entre villes baroques, plages, Etna,
@@ -48,8 +54,8 @@
             </p>
 
             <div class="hero-actions">
-              <a class="button button-primary" href="#journey">Voir le programme</a>
-              <a class="button button-secondary" href="#consultation">Consulter le site</a>
+              <a class="button button-primary" href="#journey">🧭 Voir le programme</a>
+              <a class="button button-secondary" href="#consultation">🔗 Consulter le site</a>
             </div>
 
             <div class="hero-notes">
@@ -73,7 +79,7 @@
 
           <aside class="hero-panel">
             <div class="panel-header">
-              <span class="eyebrow">Apercu de mission</span>
+              <span class="eyebrow">Apercu de mission 📌</span>
               <strong>Sicile 2026</strong>
             </div>
             <div class="kpi-list" id="hero-kpis"></div>
@@ -87,7 +93,7 @@
       <main>
         <section class="section intro-grid" id="experience">
           <article class="intro-card editorial-card">
-            <p class="eyebrow">Positionnement</p>
+            <p class="eyebrow">Positionnement 🧳</p>
             <h2>Une lecture claire, elegante et exploitable comme un mini site d'agence.</h2>
             <p>
               Cette version centralise le programme jour par jour, la carte, les temps de route,
@@ -97,30 +103,32 @@
           </article>
 
           <article class="intro-card feature-card">
-            <p class="eyebrow">Inclus dans ce parcours</p>
+            <p class="eyebrow">Inclus dans ce parcours ☀️</p>
             <ul id="highlights-list" class="highlights-list"></ul>
           </article>
         </section>
 
         <section class="section map-section">
           <div class="section-heading">
-            <p class="eyebrow">Carte de l'itineraire</p>
-            <h2>Vue globale du parcours et des nuits.</h2>
+            <p class="eyebrow">Carte de l'itineraire 🗺️</p>
+            <h2>Vue globale du parcours, des etapes et des nuits.</h2>
           </div>
           <div class="map-frame">
-            <img
-              src="./carte-itineraire-sicile-2026-inline.svg"
-              alt="Carte de l'itineraire en Sicile"
-            />
+            <div id="trip-map" class="trip-map" aria-label="Carte interactive de l'itineraire en Sicile"></div>
+            <div class="map-legend" id="map-legend">
+              <span><i class="legend-dot legend-dot-night"></i>Nuits</span>
+              <span><i class="legend-dot legend-dot-visit"></i>Visites</span>
+              <span><i class="legend-line"></i>Parcours</span>
+            </div>
           </div>
           <p class="caption">
-            Fond de carte source : Eric Gaba (Sting), Wikimedia Commons, licence CC BY-SA 3.0.
+            Carte interactive basee sur OpenStreetMap, avec affichage des etapes et du trace du voyage.
           </p>
         </section>
 
         <section class="section stats-section" id="logistics">
           <div class="section-heading">
-            <p class="eyebrow">Synthese logistique</p>
+            <p class="eyebrow">Synthese logistique 🚘</p>
             <h2>Les chiffres utiles pour cadrer le voyage.</h2>
           </div>
           <div class="stats-grid" id="stats-grid"></div>
@@ -129,7 +137,7 @@
         <section class="section journey-section" id="journey">
           <div class="section-heading split-heading">
             <div>
-              <p class="eyebrow">Programme detaille</p>
+              <p class="eyebrow">Programme detaille 📍</p>
               <h2>13 jours, filtres thematiques et lecture rapide.</h2>
             </div>
             <div class="filter-bar" id="filter-bar"></div>
@@ -141,7 +149,7 @@
           <div class="tables-grid">
             <article class="table-card">
               <div class="section-heading compact">
-                <p class="eyebrow">Trajets</p>
+                <p class="eyebrow">Trajets 🛣️</p>
                 <h2>Detail des routes</h2>
               </div>
               <div class="table-wrap">
@@ -162,7 +170,7 @@
 
             <article class="table-card" id="stays">
               <div class="section-heading compact">
-                <p class="eyebrow">Hebergements</p>
+                <p class="eyebrow">Hebergements 🛏️</p>
                 <h2>Recapitulatif des nuits</h2>
               </div>
               <div class="table-wrap">
@@ -187,7 +195,7 @@
         <section class="section service-section">
           <div class="service-panel">
             <div>
-              <p class="eyebrow">Pourquoi cette version fonctionne</p>
+              <p class="eyebrow">Pourquoi cette version fonctionne ✅</p>
               <h2>Une experience plus sereine et plus facile a reserver.</h2>
             </div>
             <div class="service-points" id="service-points"></div>
@@ -196,13 +204,13 @@
 
         <section class="section consult-section" id="consultation">
           <div class="section-heading">
-            <p class="eyebrow">Publication</p>
+            <p class="eyebrow">Publication 🚀</p>
             <h2>Consulter le site sur GitHub Pages</h2>
           </div>
           <div class="steps-grid">
             <article class="step-card">
               <span class="step-index">01</span>
-              <h3>Publier les fichiers</h3>
+              <h3>📤 Publier les fichiers</h3>
               <p>
                 Poussez les changements sur la branche <strong>main</strong> du depot
                 <a href="https://github.com/frkim/sicile2026-11j" target="_blank" rel="noreferrer">
@@ -212,7 +220,7 @@
             </article>
             <article class="step-card">
               <span class="step-index">02</span>
-              <h3>Activer Pages</h3>
+              <h3>⚙️ Activer Pages</h3>
               <p>
                 Dans GitHub, ouvrez <strong>Settings</strong> puis <strong>Pages</strong> et laissez la source
                 sur <strong>GitHub Actions</strong>. Le workflow fourni fera le deployement automatiquement.
@@ -220,7 +228,7 @@
             </article>
             <article class="step-card">
               <span class="step-index">03</span>
-              <h3>Attendre le premier deploiement</h3>
+              <h3>⏳ Attendre le premier deploiement</h3>
               <p>
                 Apres le push, GitHub lance le workflow <strong>Deploy GitHub Pages</strong>. Le premier
                 deploiement prend en general 1 a 3 minutes.
@@ -229,7 +237,7 @@
           </div>
 
           <div class="url-card">
-            <span class="eyebrow">URL attendue</span>
+            <span class="eyebrow">URL attendue 🔗</span>
             <a href="https://frkim.github.io/sicile2026-11j/" target="_blank" rel="noreferrer">
               https://frkim.github.io/sicile2026-11j/
             </a>
@@ -242,6 +250,11 @@
       </main>
     </div>
 
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="./app.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
   <title id="title">Carte de l'itineraire Sicile 2026 sur fond Wikimedia Commons</title>
   <desc id="desc">Carte de l'itineraire en Sicile avec fond de carte Wikimedia Commons integre, trajet, lieux visites et lieux de nuit.</desc>
   <defs>
@@ -52,10 +52,6 @@
      fit-margin-bottom="0" />
   <defs
      id="defs4">
-    <color-profile
-       id="color-profile3553"
-       xlink:href="C:\Windows\system32\spool\DRIVERS\COLOR\AdobeRGB1998.icc"
-       name="Adobe-RGB--1998-" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
        inkscape:vp_x="0 : 1083.5 : 1"

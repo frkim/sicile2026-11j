@@ -9,34 +9,34 @@ const itinerary = {
       "Les durees de trajet incluent une marge de 15 a 30 min par rapport au temps GPS pour les pauses, la circulation estivale et les routes sinueuses.",
   },
   highlights: [
-    "Palerme, Catane, Syracuse et Ragusa pour la dimension culturelle",
-    "Cefalu, Isola Bella, Lido di Noto et Scala dei Turchi pour les plages",
-    "Excursion complete a l'Etna avec telepherique et randonnee guidee",
-    "8 hebergements seulement pour 12 nuits, avec un rythme optimise",
+    "🏛️ Palerme, Catane, Syracuse et Ragusa pour la dimension culturelle",
+    "🏖️ Cefalu, Isola Bella, Lido di Noto et Scala dei Turchi pour les plages",
+    "🌋 Excursion complete a l'Etna avec telepherique et randonnee guidee",
+    "🏨 8 hebergements seulement pour 12 nuits, avec un rythme optimise",
   ],
   strengths: [
     {
-      title: "Arrivee fluide",
+      title: "✈️ Arrivee fluide",
       description: "Pas de longue route a l'arrivee : la premiere nuit reste a Palerme pour lancer le voyage sereinement.",
     },
     {
-      title: "Reservations regroupees",
+      title: "🧳 Reservations regroupees",
       description: "Taormine et Syracuse concentrent plusieurs nuits pour limiter les check-in et les trajets inutiles.",
     },
     {
-      title: "Rythme progressif",
+      title: "🌿 Rythme progressif",
       description: "Alternance entre visites, plages, baroque sicilien, nature et trajets raisonnables.",
     },
     {
-      title: "Fin securisee",
+      title: "🛫 Fin securisee",
       description: "Derniere nuit pres de l'aeroport de Palerme pour un depart tres tot sans stress.",
     },
   ],
   kpis: [
-    { label: "Distance totale", value: "~850 km", detail: "validation des trajets incluse" },
-    { label: "Duree max / jour", value: "2h45", detail: "avec marge de confort" },
-    { label: "Reservations", value: "8", detail: "pour 12 nuits" },
-    { label: "Style de voyage", value: "Famille", detail: "culture, mer, nature" },
+    { label: "🛣️ Distance totale", value: "~850 km", detail: "validation des trajets incluse" },
+    { label: "⏱️ Duree max / jour", value: "2h45", detail: "avec marge de confort" },
+    { label: "🏠 Reservations", value: "8", detail: "pour 12 nuits" },
+    { label: "👨‍👩‍👧‍👦 Style de voyage", value: "Famille", detail: "culture, mer, nature" },
   ],
   days: [
     {
@@ -234,15 +234,47 @@ const itinerary = {
     [7, "Trapani", "Ven. 21 aout", 1, "21 aout", "22 aout"],
     [8, "Palerme / aeroport", "Sam. 22 aout", 1, "22 aout", "23 aout"],
   ],
+  mapStops: [
+    { name: "Palerme", lat: 38.1157, lng: 13.3615, type: "night", day: "J1", note: "Arrivee et premiere nuit" },
+    { name: "Cefalu", lat: 38.0386, lng: 14.0229, type: "night", day: "J2-J3", note: "Vieille ville et plage" },
+    { name: "Taormine", lat: 37.8516, lng: 15.2853, type: "night", day: "J4-J6", note: "Base pour Taormine et l'Etna" },
+    { name: "Etna Sud", lat: 37.6997, lng: 14.9994, type: "visit", day: "J6", note: "Excursion volcan" },
+    { name: "Catane", lat: 37.5079, lng: 15.083, type: "visit", day: "J7", note: "Pause culture et marche" },
+    { name: "Syracuse", lat: 37.0755, lng: 15.2866, type: "night", day: "J7-J8", note: "Ortigia et base sud-est" },
+    { name: "Noto", lat: 36.8924, lng: 15.0699, type: "visit", day: "J8", note: "Ville baroque" },
+    { name: "Modica", lat: 36.8588, lng: 14.7601, type: "visit", day: "J9", note: "Chocolat et centre historique" },
+    { name: "Ragusa", lat: 36.9269, lng: 14.7255, type: "night", day: "J9", note: "Nuit a Ragusa" },
+    { name: "Agrigente", lat: 37.3111, lng: 13.5765, type: "night", day: "J10", note: "Vallee des Temples" },
+    { name: "Scala dei Turchi", lat: 37.2899, lng: 13.4728, type: "visit", day: "J11", note: "Falaises blanches" },
+    { name: "Trapani", lat: 38.0176, lng: 12.5362, type: "night", day: "J11", note: "Nuit a Trapani" },
+    { name: "Riserva dello Zingaro", lat: 38.1026, lng: 12.8075, type: "visit", day: "J12", note: "Randonnee et criques" },
+    { name: "Palerme aeroport", lat: 38.1759, lng: 13.091, type: "night", day: "J12-J13", note: "Derniere nuit et vol retour" },
+  ],
+};
+
+const dayImageMeta = {
+  1: { image: "./assets/day-images/day-01.jpg", landmark: "Piazza Pretoria" },
+  2: { image: "./assets/day-images/day-02.jpg", landmark: "Palazzo dei Normanni" },
+  3: { image: "./assets/day-images/day-03.jpg", landmark: "Cefalu Cathedral" },
+  4: { image: "./assets/day-images/day-04.jpg", landmark: "Taormina" },
+  5: { image: "./assets/day-images/day-05.jpg", landmark: "Isola Bella" },
+  6: { image: "./assets/day-images/day-06.jpg", landmark: "Mount Etna" },
+  7: { image: "./assets/day-images/day-07.jpg", landmark: "Catania Cathedral" },
+  8: { image: "./assets/day-images/day-08.jpg", landmark: "Noto Cathedral" },
+  9: { image: "./assets/day-images/day-09.jpg", landmark: "Ragusa Ibla" },
+  10: { image: "./assets/day-images/day-10.jpg", landmark: "Valley of the Temples" },
+  11: { image: "./assets/day-images/day-11.jpg", landmark: "Scala dei Turchi" },
+  12: { image: "./assets/day-images/day-12.jpg", landmark: "Riserva dello Zingaro" },
+  13: { image: "./assets/day-images/day-13.jpg", landmark: "Aeroporto di Palermo-Punta Raisi" },
 };
 
 const filters = [
-  { key: "all", label: "Tout" },
-  { key: "culture", label: "Culture" },
-  { key: "plage", label: "Plages" },
-  { key: "nature", label: "Nature" },
-  { key: "route", label: "Trajets" },
-  { key: "logistique", label: "Logistique" },
+  { key: "all", label: "✨ Tout" },
+  { key: "culture", label: "🏛️ Culture" },
+  { key: "plage", label: "🏖️ Plages" },
+  { key: "nature", label: "🌿 Nature" },
+  { key: "route", label: "🚗 Trajets" },
+  { key: "logistique", label: "🧭 Logistique" },
 ];
 
 let activeFilter = "all";
@@ -255,6 +287,63 @@ const journeyGrid = document.querySelector("#journey-grid");
 const routesTable = document.querySelector("#routes-table");
 const staysTable = document.querySelector("#stays-table");
 const servicePoints = document.querySelector("#service-points");
+
+function createMapIcon(type, label) {
+  return L.divIcon({
+    className: "trip-map-marker",
+    html: `<span class="trip-map-pin trip-map-pin-${type}">${label}</span>`,
+    iconSize: [38, 38],
+    iconAnchor: [19, 19],
+    popupAnchor: [0, -14],
+  });
+}
+
+function renderMap() {
+  const mapElement = document.querySelector("#trip-map");
+
+  if (!mapElement || typeof L === "undefined") {
+    return;
+  }
+
+  const map = L.map(mapElement, {
+    scrollWheelZoom: false,
+    zoomControl: true,
+  });
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(map);
+
+  const route = itinerary.mapStops.map((stop) => [stop.lat, stop.lng]);
+
+  const path = L.polyline(route, {
+    color: "#c65c35",
+    weight: 5,
+    opacity: 0.9,
+    lineJoin: "round",
+  }).addTo(map);
+
+  itinerary.mapStops.forEach((stop) => {
+    const label = stop.type === "night" ? "🌙" : "📍";
+    const marker = L.marker([stop.lat, stop.lng], {
+      icon: createMapIcon(stop.type, label),
+      title: stop.name,
+    }).addTo(map);
+
+    marker.bindPopup(`
+      <div class="trip-map-popup">
+        <strong>${stop.name}</strong>
+        <span>${stop.day}</span>
+        <p>${stop.note}</p>
+      </div>
+    `);
+  });
+
+  map.fitBounds(path.getBounds(), {
+    padding: [28, 28],
+  });
+}
 
 function renderHeroKpis() {
   heroKpis.innerHTML = itinerary.kpis
@@ -281,22 +370,22 @@ function renderHighlights() {
 function renderStats() {
   const cards = [
     {
-      label: "Total estime",
+      label: "🛣️ Total estime",
       value: `~${itinerary.overview.totalKm} km`,
       description: "distance globale sur l'ensemble du sejour",
     },
     {
-      label: "Nuits",
+      label: "🌙 Nuits",
       value: itinerary.overview.totalNights,
       description: "12 nuits organisees avec peu de changements",
     },
     {
-      label: "Reservations",
+      label: "🏨 Reservations",
       value: itinerary.overview.reservations,
       description: "Airbnb a reserver pour couvrir tout le voyage",
     },
     {
-      label: "Temps fort",
+      label: "⏳ Temps fort",
       value: itinerary.overview.maxDrive,
       description: "plus longue etape, marge comprise",
     },
@@ -341,9 +430,22 @@ function renderJourney() {
   );
 
   journeyGrid.innerHTML = visibleDays
-    .map(
-      (day) => `
+    .map((day) => {
+      const media = dayImageMeta[day.day];
+
+      return `
         <article class="journey-card">
+          ${media ? `
+            <figure class="journey-media">
+              <img
+                class="journey-image"
+                src="${media.image}"
+                alt="${media.landmark}"
+                loading="lazy"
+              />
+              <figcaption class="journey-caption">📸 Lieu emblematique : ${media.landmark}</figcaption>
+            </figure>
+          ` : ""}
           <div class="journey-topline">
             <span class="journey-day">J${day.day}</span>
             <div class="tag-row">
@@ -357,8 +459,8 @@ function renderJourney() {
           </ul>
           ${day.stay !== "—" ? `<span class="stay-pill">Nuit : ${day.stay}</span>` : ""}
         </article>
-      `,
-    )
+      `;
+    })
     .join("");
 }
 
@@ -416,3 +518,4 @@ renderJourney();
 renderRoutes();
 renderStays();
 renderStrengths();
+renderMap();
