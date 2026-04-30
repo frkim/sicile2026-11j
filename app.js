@@ -17,7 +17,7 @@ const itinerary = {
   strengths: [
     {
       title: "✈️ Arrivee fluide",
-      description: "Pas de longue route a l'arrivee : la premiere nuit reste a Palerme pour lancer le voyage sereinement.",
+      description: "Pas de longue route a l'arrivee : les deux premieres nuits restent a Palerme pour lancer le voyage sereinement.",
     },
     {
       title: "🧳 Reservations regroupees",
@@ -55,27 +55,27 @@ const itinerary = {
     {
       day: 2,
       date: "Mer. 12 aout",
-      title: "Palerme → Cefalu",
-      stay: "Cefalu",
-      themes: ["culture", "route"],
+      title: "Palerme journee complete",
+      stay: "Palerme",
+      themes: ["culture"],
       items: [
         "Palazzo dei Normanni et Cappella Palatina",
         "Cathedrale de Palerme, Ballaro et San Giovanni degli Eremiti",
-        "Route Palerme → Cefalu : 1h15 estimee, ~70 km",
-        "Arrivee en soiree et diner en bord de mer",
+        "Balade dans le centre historique et marches locaux",
+        "Diner street food sicilienne dans les ruelles de Palerme",
       ],
     },
     {
       day: 3,
       date: "Jeu. 13 aout",
-      title: "Cefalu entre vieille ville et plage",
+      title: "Palerme → Cefalu",
       stay: "Cefalu",
-      themes: ["plage", "culture"],
+      themes: ["route", "plage", "culture"],
       items: [
+        "Route Palerme → Cefalu : 1h15 estimee, ~70 km",
         "Duomo di Cefalu, Lavatoio medievale et ruelles du centre",
         "Option : Rocca di Cefalu pour un panorama exceptionnel",
-        "Apres-midi plage sur la grande plage ou a Caldura",
-        "Diner sur le front de mer",
+        "Apres-midi plage et diner sur le front de mer",
       ],
     },
     {
@@ -208,7 +208,7 @@ const itinerary = {
     },
   ],
   routes: [
-    [2, "Palerme → Cefalu", "1h", "1h15", "~70 km"],
+    [3, "Palerme → Cefalu", "1h", "1h15", "~70 km"],
     [4, "Cefalu → Taormine", "2h15", "2h45", "~165 km"],
     [6, "Taormine → Rifugio Sapienza (Etna Sud)", "1h15", "1h30", "~50 km"],
     [6, "Rifugio Sapienza → Taormine (retour)", "1h15", "1h30", "~50 km"],
@@ -225,8 +225,8 @@ const itinerary = {
     [12, "Riserva dello Zingaro → Palerme aeroport", "1h", "1h15", "~55 km"],
   ],
   stays: [
-    [1, "Palerme", "Mar. 11 aout", 1, "11 aout", "12 aout"],
-    [2, "Cefalu", "Mer. 12 - Jeu. 13 aout", 2, "12 aout", "14 aout"],
+    [1, "Palerme", "Mar. 11 - Mer. 12 aout", 2, "11 aout", "13 aout"],
+    [2, "Cefalu", "Jeu. 13 aout", 1, "13 aout", "14 aout"],
     [3, "Taormine", "Ven. 14 - Dim. 16 aout", 3, "14 aout", "17 aout"],
     [4, "Syracuse", "Lun. 17 - Mar. 18 aout", 2, "17 aout", "19 aout"],
     [5, "Ragusa", "Mer. 19 aout", 1, "19 aout", "20 aout"],
@@ -235,8 +235,8 @@ const itinerary = {
     [8, "Palerme / aeroport", "Sam. 22 aout", 1, "22 aout", "23 aout"],
   ],
   mapStops: [
-    { name: "Palerme", lat: 38.1157, lng: 13.3615, type: "night", day: "J1", note: "Arrivee et premiere nuit" },
-    { name: "Cefalu", lat: 38.0386, lng: 14.0229, type: "night", day: "J2-J3", note: "Vieille ville et plage" },
+    { name: "Palerme", lat: 38.1157, lng: 13.3615, type: "night", day: "J1-J2", note: "Arrivee et deux premieres nuits" },
+    { name: "Cefalu", lat: 38.0386, lng: 14.0229, type: "night", day: "J3", note: "Vieille ville et plage" },
     { name: "Taormine", lat: 37.8516, lng: 15.2853, type: "night", day: "J4-J6", note: "Base pour Taormine et l'Etna" },
     { name: "Etna Sud", lat: 37.6997, lng: 14.9994, type: "visit", day: "J6", note: "Excursion volcan" },
     { name: "Catane", lat: 37.5079, lng: 15.083, type: "visit", day: "J7", note: "Pause culture et marche" },
