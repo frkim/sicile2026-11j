@@ -47,7 +47,7 @@
     <circle class="overnight" cx="361" cy="245" r="13"/>
     <text class="num" x="361" y="245">1</text>
     <text class="label" x="378" y="236">Palerme</text>
-    <text class="small" x="378" y="256">nuits 1 et 12</text>
+    <text class="small" x="378" y="256">nuits 1-2 et 12</text>
 
     <circle class="airport" cx="299" cy="226" r="11"/>
     <text class="label" x="188" y="212">Palerme aeroport</text>
@@ -56,7 +56,7 @@
     <circle class="overnight" cx="513" cy="269" r="13"/>
     <text class="num" x="513" y="269">2</text>
     <text class="label" x="530" y="260">Cefalu</text>
-    <text class="small" x="530" y="280">nuits 2-3</text>
+    <text class="small" x="530" y="280">nuit 3</text>
 
     <circle class="overnight" cx="805" cy="330" r="13"/>
     <text class="num" x="805" y="330">3</text>

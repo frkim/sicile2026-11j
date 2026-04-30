@@ -28,23 +28,24 @@
 
 ---
 
-## 🏛️ Jour 2 · Mer. 12 août – Palerme → Cefalù
+## 🏛️ Jour 2 · Mer. 12 août – Palerme (journée complète)
 
 - Matin : visite de **Palerme**
   - Palazzo dei Normanni + Cappella Palatina (mosaïques byzantines)
   - Cathédrale de Palerme (tombeaux royaux, terrasses panoramiques)
   - Marché de Ballarò (ambiance authentique, goûter la street food)
   - Chiesa di San Giovanni degli Eremiti (cloître, coupoles rouges)
-- 🚗 Fin d'après-midi : **Palerme** → **Cefalù** · ⏱️ 1h15 (1h GPS + marge) · ~70 km
-- 🌅 Arrivée en soirée, installation + dîner à Cefalù
+- Après-midi : balade dans le centre historique et marchés locaux
+- 🍽️ Dîner : street food sicilienne dans les ruelles de Palerme
 
-> 🏨 **Nuit 2 : Cefalù**
+> 🏨 **Nuit 2 : Palerme**
 
 ---
 
-## 🌊 Jour 3 · Jeu. 13 août – Cefalù
+## 🌊 Jour 3 · Jeu. 13 août – Palerme → Cefalù
 
-- Matin : visite de la vieille ville
+- 🚗 Matin : **Palerme** → **Cefalù** · ⏱️ 1h15 (1h GPS + marge) · ~70 km
+- Visite de la vieille ville
   - Duomo di Cefalù (mosaïque du Christ Pantocrator, UNESCO)
   - Lavatoio medievale (lavoir médiéval en contrebas)
   - Ruelles pittoresques et boutiques artisanales
@@ -209,7 +210,7 @@
 
 | Jour | Trajet | GPS | Estimé | Distance |
 |:----:|--------|:---:|:------:|:--------:|
-| 2 | Palerme → Cefalù | 1h | 1h15 | ~70 km |
+| 3 | Palerme → Cefalù | 1h | 1h15 | ~70 km |
 | 4 | Cefalù → Taormine | 2h15 | 2h45 | ~165 km |
 | 6 | Taormine → Rifugio Sapienza (Etna Sud) | 1h15 | 1h30 | ~50 km |
 | 6 | Rifugio Sapienza → Taormine (retour) | 1h15 | 1h30 | ~50 km |
@@ -231,8 +232,8 @@
 
 | # | Ville | Dates | Nuits | Check-in | Check-out |
 |:-:|-------|-------|:-----:|----------|-----------|
-| 1 | **Palerme** | Mar. 11 août | 1 | 11 août | 12 août |
-| 2 | **Cefalù** | Mer. 12 – Jeu. 13 août | 2 | 12 août | 14 août |
+| 1 | **Palerme** | Mar. 11 – Mer. 12 août | 2 | 11 août | 13 août |
+| 2 | **Cefalù** | Jeu. 13 août | 1 | 13 août | 14 août |
 | 3 | **Taormine** | Ven. 14 – Dim. 16 août | 3 | 14 août | 17 août |
 | 4 | **Syracuse** | Lun. 17 – Mar. 18 août | 2 | 17 août | 19 août |
 | 5 | **Ragusa** | Mer. 19 août | 1 | 19 août | 20 août |
