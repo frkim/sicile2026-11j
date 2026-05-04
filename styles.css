@@ -1011,6 +1011,18 @@ a {
   line-height: 1.65;
 }
 
+.gmaps-link {
+  text-decoration: none;
+  font-size: 0.95em;
+  margin-left: 4px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.gmaps-link:hover {
+  opacity: 1;
+}
+
 .stay-pill {
   display: inline-flex;
   margin-top: 16px;

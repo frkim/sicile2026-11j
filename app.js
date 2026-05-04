@@ -46,10 +46,10 @@ const itinerary = {
       stay: "Palerme",
       themes: ["logistique", "culture"],
       items: [
-        "13:35 → 16:00 arrivee a Palerme et recuperation de la voiture",
-        "Installation a l'hotel et premiere respiration dans le centre historique",
-        "Balade de reperage : Quattro Canti et Piazza Pretoria",
-        "Diner street food sicilienne : arancini, panelle, sfincione",
+        { text: "13:35 → 16:00 arrivee a Palerme et recuperation de la voiture" },
+        { text: "Installation a l'hotel et premiere respiration dans le centre historique" },
+        { text: "Balade de reperage : Quattro Canti et Piazza Pretoria", map: "Quattro Canti, Palermo, Sicily" },
+        { text: "Diner street food sicilienne : arancini, panelle, sfincione" },
       ],
     },
     {
@@ -59,10 +59,10 @@ const itinerary = {
       stay: "Palerme",
       themes: ["culture"],
       items: [
-        "Palazzo dei Normanni et Cappella Palatina",
-        "Cathedrale de Palerme, Ballaro et San Giovanni degli Eremiti",
-        "Balade dans le centre historique et marches locaux",
-        "Diner street food sicilienne dans les ruelles de Palerme",
+        { text: "Palazzo dei Normanni et Cappella Palatina", map: "Palazzo dei Normanni, Palermo, Sicily" },
+        { text: "Cathedrale de Palerme, Ballaro et San Giovanni degli Eremiti", map: "Cattedrale di Palermo, Sicily" },
+        { text: "Balade dans le centre historique et marches locaux" },
+        { text: "Diner street food sicilienne dans les ruelles de Palerme" },
       ],
     },
     {
@@ -72,10 +72,10 @@ const itinerary = {
       stay: "Cefalu",
       themes: ["route", "plage", "culture"],
       items: [
-        "Route Palerme → Cefalu : 1h15 estimee, ~70 km",
-        "Duomo di Cefalu, Lavatoio medievale et ruelles du centre",
-        "Option : Rocca di Cefalu pour un panorama exceptionnel",
-        "Apres-midi plage et diner sur le front de mer",
+        { text: "Route Palerme → Cefalu : 1h15 estimee, ~70 km" },
+        { text: "Duomo di Cefalu, Lavatoio medievale et ruelles du centre", map: "Duomo di Cefalù, Sicily" },
+        { text: "Option : Rocca di Cefalu pour un panorama exceptionnel", map: "Rocca di Cefalù, Sicily" },
+        { text: "Apres-midi plage et diner sur le front de mer" },
       ],
     },
     {
@@ -85,10 +85,10 @@ const itinerary = {
       stay: "Taormine",
       themes: ["route", "panorama"],
       items: [
-        "Route cotiere Cefalu → Taormine : 2h45 estimees, ~165 km",
-        "Arrivee a Taormine et premiere decouverte du Corso Umberto",
-        "Piazza IX Aprile et traversee du centre historique",
-        "Aperitivo avec vue sur la baie",
+        { text: "Route cotiere Cefalu → Taormine : 2h45 estimees, ~165 km" },
+        { text: "Arrivee a Taormine et premiere decouverte du Corso Umberto", map: "Corso Umberto, Taormina, Sicily" },
+        { text: "Piazza IX Aprile et traversee du centre historique", map: "Piazza IX Aprile, Taormina, Sicily" },
+        { text: "Aperitivo avec vue sur la baie" },
       ],
     },
     {
@@ -98,10 +98,10 @@ const itinerary = {
       stay: "Taormine",
       themes: ["plage", "culture"],
       items: [
-        "Theatre grec avec vue sur l'Etna et la mer",
-        "Descente vers Isola Bella pour plage et snorkeling",
-        "Villa Comunale et jardins ombrages",
-        "Coucher de soleil depuis Piazza IX Aprile",
+        { text: "Theatre grec avec vue sur l'Etna et la mer", map: "Teatro Antico di Taormina, Sicily" },
+        { text: "Descente vers Isola Bella pour plage et snorkeling", map: "Isola Bella, Taormina, Sicily" },
+        { text: "Villa Comunale et jardins ombrages", map: "Villa Comunale, Taormina, Sicily" },
+        { text: "Coucher de soleil depuis Piazza IX Aprile", map: "Piazza IX Aprile, Taormina, Sicily" },
       ],
     },
     {
@@ -111,10 +111,10 @@ const itinerary = {
       stay: "Taormine",
       themes: ["nature", "aventure"],
       items: [
-        "Taormine → Rifugio Sapienza : 1h30, ~50 km",
-        "Telepherique jusqu'a 2 500 m puis randonnee guidee",
-        "Paysages de lave, crateres et panorama complet sur l'ile",
-        "Retour a Taormine en fin de journee",
+        { text: "Taormine → Rifugio Sapienza : 1h30, ~50 km", map: "Rifugio Sapienza, Etna, Sicily" },
+        { text: "Telepherique jusqu'a 2 500 m puis randonnee guidee", map: "Funivia dell'Etna, Sicily" },
+        { text: "Paysages de lave, crateres et panorama complet sur l'ile" },
+        { text: "Retour a Taormine en fin de journee" },
       ],
     },
     {
@@ -124,10 +124,10 @@ const itinerary = {
       stay: "Syracuse",
       themes: ["route", "culture"],
       items: [
-        "Taormine → Catane : 1h15, ~50 km",
-        "Arret a Catane : marche aux poissons, Via Etnea, Piazza Duomo",
-        "Catane → Syracuse : 1h15, ~60 km",
-        "Installation a Syracuse",
+        { text: "Taormine → Catane : 1h15, ~50 km" },
+        { text: "Arret a Catane : marche aux poissons, Via Etnea, Piazza Duomo", map: "Piazza Duomo, Catania, Sicily" },
+        { text: "Catane → Syracuse : 1h15, ~60 km" },
+        { text: "Installation a Syracuse" },
       ],
     },
     {
@@ -137,10 +137,10 @@ const itinerary = {
       stay: "Syracuse",
       themes: ["culture", "plage"],
       items: [
-        "Ortigia : Piazza Duomo, Fonte Aretusa et marche",
-        "Excursion Syracuse → Noto : 45 min, ~33 km",
-        "Noto : Corso Vittorio Emanuele, cathedrale San Nicolo et Palazzo Nicolaci",
-        "Option plage : Lido di Noto ou Calamosche",
+        { text: "Ortigia : Piazza Duomo, Fonte Aretusa et marche", map: "Fonte Aretusa, Syracuse, Sicily" },
+        { text: "Excursion Syracuse → Noto : 45 min, ~33 km" },
+        { text: "Noto : Corso Vittorio Emanuele, cathedrale San Nicolo et Palazzo Nicolaci", map: "Cattedrale di Noto, Sicily" },
+        { text: "Option plage : Lido di Noto ou Calamosche", map: "Lido di Noto, Sicily" },
       ],
     },
     {
@@ -150,10 +150,10 @@ const itinerary = {
       stay: "Ragusa",
       themes: ["culture", "gastronomie"],
       items: [
-        "Syracuse → Modica : 1h30, ~70 km",
-        "Degustation du chocolat de Modica chez Bonajuto",
-        "Modica → Ragusa : 30 min, ~16 km",
-        "Ragusa Ibla, Giardino Ibleo et diner en trattoria",
+        { text: "Syracuse → Modica : 1h30, ~70 km" },
+        { text: "Degustation du chocolat de Modica chez Bonajuto", map: "Antica Dolceria Bonajuto, Modica, Sicily" },
+        { text: "Modica → Ragusa : 30 min, ~16 km" },
+        { text: "Ragusa Ibla, Giardino Ibleo et diner en trattoria", map: "Ragusa Ibla, Sicily" },
       ],
     },
     {
@@ -163,10 +163,10 @@ const itinerary = {
       stay: "Agrigente",
       themes: ["route", "culture"],
       items: [
-        "Route Ragusa → Agrigente : 2h30, ~130 km",
-        "Vallee des Temples en fin de journee",
-        "Temple de la Concorde, Junon et Heracles",
-        "Jardin de la Kolymbethra et lumiere doree au coucher du soleil",
+        { text: "Route Ragusa → Agrigente : 2h30, ~130 km" },
+        { text: "Vallee des Temples en fin de journee", map: "Valle dei Templi, Agrigento, Sicily" },
+        { text: "Temple de la Concorde, Junon et Heracles", map: "Tempio della Concordia, Agrigento, Sicily" },
+        { text: "Jardin de la Kolymbethra et lumiere doree au coucher du soleil", map: "Giardino della Kolymbethra, Agrigento, Sicily" },
       ],
     },
     {
@@ -176,10 +176,10 @@ const itinerary = {
       stay: "Trapani",
       themes: ["plage", "route"],
       items: [
-        "Agrigente → Scala dei Turchi : 25 min, ~15 km",
-        "Falaises blanches et baignade si les conditions le permettent",
-        "Scala dei Turchi → Trapani : 2h30, ~140 km",
-        "Balade a Trapani et option coucher de soleil dans les salines",
+        { text: "Agrigente → Scala dei Turchi : 25 min, ~15 km", map: "Scala dei Turchi, Sicily" },
+        { text: "Falaises blanches et baignade si les conditions le permettent" },
+        { text: "Scala dei Turchi → Trapani : 2h30, ~140 km" },
+        { text: "Balade a Trapani et option coucher de soleil dans les salines", map: "Saline di Trapani, Sicily" },
       ],
     },
     {
@@ -189,10 +189,10 @@ const itinerary = {
       stay: "Palerme / aeroport",
       themes: ["nature", "route"],
       items: [
-        "Trapani → Riserva dello Zingaro : 50 min, ~37 km",
-        "Randonnee cotiere et baignade dans les criques",
-        "Zingaro → Palerme aeroport : 1h15, ~55 km",
-        "Dernier diner sicilien au calme",
+        { text: "Trapani → Riserva dello Zingaro : 50 min, ~37 km", map: "Riserva Naturale dello Zingaro, Sicily" },
+        { text: "Randonnee cotiere et baignade dans les criques" },
+        { text: "Zingaro → Palerme aeroport : 1h15, ~55 km" },
+        { text: "Dernier diner sicilien au calme" },
       ],
     },
     {
@@ -202,8 +202,8 @@ const itinerary = {
       stay: "—",
       themes: ["logistique"],
       items: [
-        "Vol a 06:30",
-        "Depart de l'hotel vers 03:30",
+        { text: "Vol a 06:30" },
+        { text: "Depart de l'hotel vers 03:30" },
       ],
     },
   ],
@@ -288,6 +288,19 @@ const themeMeta = {
   gastronomie: { icon: "🍝", label: "Gastronomie" },
 };
 
+function itemText(item) {
+  return typeof item === "string" ? item : item.text;
+}
+
+function renderItem(item) {
+  const it = typeof item === "string" ? { text: item } : item;
+  if (it.map) {
+    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(it.map)}`;
+    return `${it.text} <a class="gmaps-link" href="${url}" target="_blank" rel="noopener noreferrer" title="Voir sur Google Maps">📍</a>`;
+  }
+  return it.text;
+}
+
 function themeIcon(key) {
   return (themeMeta[key] && themeMeta[key].icon) || "🏷️";
 }
@@ -371,7 +384,7 @@ function buildStopPopup(stop, index) {
     .map((d) => {
       const items = d.items
         .slice(0, 3)
-        .map((it) => `<li>${escapeHtml(it)}</li>`)
+        .map((it) => `<li>${escapeHtml(itemText(it))}</li>`)
         .join("");
       const chip = days.length > 1 ? `<span class="trip-map-popup-chip">J${d.day}</span>` : "";
       return `
@@ -636,7 +649,7 @@ function renderJourney() {
             </div>
             <h3>${day.title}</h3>
             <ul class="journey-list">
-              ${day.items.map((item) => `<li>${item}</li>`).join("")}
+              ${day.items.map((item) => `<li>${renderItem(item)}</li>`).join("")}
             </ul>
             ${day.stay !== "—" ? `<span class="stay-pill">Nuit : ${day.stay}</span>` : ""}
           </div>
