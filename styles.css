@@ -1004,11 +1004,18 @@ a {
 
 .journey-list {
   margin: 0;
-  padding-left: 18px;
+  padding-left: 0;
+  list-style: none;
   display: grid;
   gap: 10px;
   color: var(--ink-700);
   line-height: 1.65;
+}
+
+.item-icon {
+  display: inline-block;
+  min-width: 1.4em;
+  text-align: center;
 }
 
 .gmaps-link {
@@ -1023,6 +1030,20 @@ a {
   opacity: 1;
 }
 
+.route-link {
+  margin-left: 0;
+  opacity: 1;
+  color: var(--teal-500, #2f7f97);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+
+.route-link:hover {
+  text-decoration-style: solid;
+  opacity: 0.85;
+}
+
 .stay-pill {
   display: inline-flex;
   margin-top: 16px;
@@ -1031,6 +1052,16 @@ a {
   background: rgba(198, 92, 53, 0.1);
   color: var(--coral-500);
   font-weight: 800;
+}
+
+.stay-pill-link {
+  text-decoration: none;
+  color: var(--coral-500);
+  transition: background 0.2s;
+}
+
+.stay-pill-link:hover {
+  background: rgba(198, 92, 53, 0.18);
 }
 
 .tables-grid {

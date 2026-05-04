@@ -296,13 +296,53 @@ function itemText(item) {
   return typeof item === "string" ? item : item.text;
 }
 
+function itemIcon(text) {
+  const t = text.toLowerCase();
+  if (/vol\s/.test(t) || /depart\s/.test(t) || (/arrivee/.test(t) && /aeroport|avion|vol|voiture/.test(t))) return "✈️";
+  if (/\u2192.*km/.test(t) || /^route\s/i.test(t) || /\u2192.*min/.test(t) || /\u2192.*h\d/i.test(t)) return "🚗";
+  if (/installation|hotel|check.?in/i.test(t)) return "🏨";
+  if (/telepherique|cratere|lave|etna|volcan/i.test(t)) return "🌋";
+  if (/randonnee|sentier/i.test(t)) return "🥾";
+  if (/plage|baignade|snorkeling|crique/i.test(t)) return "🏖️";
+  if (/diner|street food|degustation|trattoria|gastr/i.test(t)) return "🍽️";
+  if (/duomo|palazzo|cathedrale|temple|teatro|piazza|cappella|chiesa|ortigia|baroque|corso|giardino|fonte/i.test(t)) return "🏛️";
+  if (/panorama|vue|coucher du soleil|lumiere doree/i.test(t)) return "🌅";
+  if (/marche|ballaro/i.test(t)) return "🛍️";
+  if (/balade|promenade|traversee|ruelles|front de mer/i.test(t)) return "🚶";
+  if (/riserva|zingaro|falaise|nature/i.test(t)) return "🏞️";
+  if (/retour/i.test(t)) return "🔄";
+  if (/option/i.test(t)) return "💡";
+  return "▸";
+}
+
+function parseRouteFromText(text) {
+  const match = text.match(/([A-ZÀ-Ü][\w\s'À-ü]+?)\s*\u2192\s*([A-ZÀ-Ü][\w\s'À-ü]+?)\s*:/);
+  if (match) {
+    let from = match[1].replace(/^(?:Route\s+(?:cotiere\s+)?|Excursion\s+)/i, "").trim();
+    let to = match[2].trim();
+    return { from, to };
+  }
+  return null;
+}
+
 function renderItem(item) {
   const it = typeof item === "string" ? { text: item } : item;
+  const icon = itemIcon(it.text);
+  const route = parseRouteFromText(it.text);
+
+  let rendered = it.text;
+
+  if (route) {
+    const dirUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(route.from + ", Sicile, Italie")}&destination=${encodeURIComponent(route.to + ", Sicile, Italie")}&travelmode=driving`;
+    rendered = `<a class="gmaps-link route-link" href="${dirUrl}" target="_blank" rel="noopener noreferrer" title="Voir l'itineraire sur Google Maps">${it.text}</a>`;
+  }
+
   if (it.map) {
     const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(it.map)}`;
-    return `${it.text} <a class="gmaps-link" href="${url}" target="_blank" rel="noopener noreferrer" title="Voir sur Google Maps">📍</a>`;
+    rendered = `${rendered} <a class="gmaps-link" href="${url}" target="_blank" rel="noopener noreferrer" title="Voir sur Google Maps">📍</a>`;
   }
-  return it.text;
+
+  return `<span class="item-icon" aria-hidden="true">${icon}</span> ${rendered}`;
 }
 
 function themeIcon(key) {
@@ -614,6 +654,22 @@ function renderFilters() {
   });
 }
 
+const stayAddressMap = {};
+itinerary.stays.forEach(([, city, , , , , address]) => {
+  if (address && !address.startsWith("TODO")) {
+    stayAddressMap[city] = address;
+  }
+});
+
+function renderStayPill(stayName) {
+  const address = stayAddressMap[stayName];
+  if (address) {
+    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+    return `<a class="stay-pill stay-pill-link" href="${url}" target="_blank" rel="noopener noreferrer" title="Voir l'hebergement sur Google Maps">🏨 Nuit : ${stayName} 📍</a>`;
+  }
+  return `<span class="stay-pill">🏨 Nuit : ${stayName}</span>`;
+}
+
 function renderJourney() {
   const visibleDays = itinerary.days.filter(
     (day) => activeFilter === "all" || day.themes.includes(activeFilter),
@@ -655,7 +711,7 @@ function renderJourney() {
             <ul class="journey-list">
               ${day.items.map((item) => `<li>${renderItem(item)}</li>`).join("")}
             </ul>
-            ${day.stay !== "—" ? `<span class="stay-pill">Nuit : ${day.stay}</span>` : ""}
+            ${day.stay !== "—" ? renderStayPill(day.stay) : ""}
           </div>
         </article>
       `;
