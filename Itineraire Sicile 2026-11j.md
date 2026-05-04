@@ -1,6 +1,6 @@
 # 🗺️ Road trip Sicile – 11 au 23 août 2026
 
-> Version finale optimisée — 12 nuits, ~850 km
+> Version finale optimisée — 12 nuits, ~920 km
 
 > **📌 Note :** Les durées de trajet indiquées incluent une marge de 15 à 30 min par rapport au temps GPS, pour tenir compte des pauses, de la circulation estivale (août) et des routes sinueuses siciliennes.
 
@@ -67,41 +67,41 @@
   - Porta Messina → Porta Catania (traversée du centre)
 - 🍽️ Aperitivo avec vue sur la baie
 
-> 🏨 **Nuit 4 : Taormine**
+> 🏨 **Nuit 4 : Taormina**
 
 ---
 
-## 🎭 Jour 5 · Sam. 15 août – Taormine
+## 🎭 Jour 5 · Sam. 15 août – Taormine → Nicolosi
 
 - Matin : **Théâtre grec** (IIe siècle av. J.-C., vue Etna + mer)
 - 🌊 Descente vers **Isola Bella** (funiculaire ou à pied)
   - Plage de galets et baignade dans la réserve naturelle
   - Snorkeling autour de l'îlot
-- Après-midi : Giardini della Villa Comunale (jardins ombragés)
-- 🌅 Coucher de soleil depuis Piazza IX Aprile
+- 🚗 **Taormina** → **Nicolosi** · ⏱️ 1h10 (50 min GPS + marge) · ~55 km
+- Installation à Nicolosi, au pied de l'Etna
 
-> 🏨 **Nuit 5 : Taormine**
+> 🏨 **Nuit 5 : Nicolosi**
 
 ---
 
 ## 🌋 Jour 6 · Dim. 16 août – Excursion Etna (journée complète)
 
-- 🚗 **Taormine** → **Rifugio Sapienza** (Etna Sud, 1 900 m) · ⏱️ 1h30 (1h15 GPS + marge) · ~50 km
+- 🚗 **Nicolosi** → **Rifugio Sapienza** (Etna Sud, 1 900 m) · ⏱️ 45 min (35 min GPS + marge) · ~20 km
 - 🚠 Téléphérique jusqu'à 2 500 m
 - 🥾 Randonnée vers les cratères sommitaux avec guide
 - Paysages lunaires, coulées de lave, vues panoramiques
 - 🍽️ Déjeuner au refuge
-- 🚗 **Rifugio Sapienza** → **Taormine** · ⏱️ 1h30 (1h15 GPS + marge) · ~50 km (retour)
+- 🚗 **Rifugio Sapienza** → **Nicolosi** · ⏱️ 45 min (35 min GPS + marge) · ~20 km (retour)
 
-> 🏨 **Nuit 6 : Taormine**
+> 🏨 **Nuit 6 : Nicolosi**
 
 ---
 
-## 🐟 Jour 7 · Lun. 17 août – Taormine → Syracuse (via Catane)
+## 🐟 Jour 7 · Lun. 17 août – Nicolosi → Syracuse (via Catane)
 
-- 🚗 **Taormine** → **Catane** · ⏱️ 1h15 (1h GPS + marge) · ~50 km
+- 🚗 **Nicolosi** → **Catane** · ⏱️ 30 min (20 min GPS + marge) · ~18 km
   - Arrêt visite de **Catane** (marché aux poissons, Via Etnea, Piazza Duomo)
-- 🚗 **Catane** → **Syracuse** · ⏱️ 1h15 (1h GPS + marge) · ~60 km (E45)
+- 🚗 **Catane** → **Syracuse** · ⏱️ 1h15 (1h GPS + marge) · ~60 km
 
 > 🏨 **Nuit 7 : Syracuse**
 
@@ -154,38 +154,36 @@
 
 ---
 
-## 🤍 Jour 11 · Ven. 21 août – Scala dei Turchi → Trapani
+## 🤍 Jour 11 · Ven. 21 août – Scala dei Turchi → Alcamo
 
 - 🚗 **Agrigente** → **Scala dei Turchi** (Realmonte) · ⏱️ 25 min (20 min GPS + marge) · ~15 km
   - Falaises de marne blanche sculptées par le vent
   - 🌊 Baignade au pied des falaises (arriver tôt le matin)
-- 🚗 **Scala dei Turchi** → **Trapani** · ⏱️ 2h30 (2h GPS + marge) · ~140 km
-  - Arrêt possible à **Eraclea Minoa** (plage + ruines grecques, à ~50 km)
-- Fin de journée : balade sur le front de mer de **Trapani**
-  - Centro storico, Torre di Ligny
-  - 🌊 Option : salines de Trapani (coucher de soleil sur les moulins à vent)
+- 🚗 **Scala dei Turchi** → **Alcamo** · ⏱️ 2h15 (1h45 GPS + marge) · ~130 km
+- Installation à Alcamo et dîner en centre-ville
 
-> 🏨 **Nuit 11 : Trapani**
+> 🏨 **Nuit 11 : Alcamo**
 
 ---
 
-## 🌿 Jour 12 · Sam. 22 août – Zingaro → Palerme (aéroport)
+## 🌿 Jour 12 · Sam. 22 août – Zingaro (dernière journée)
 
-- 🚗 **Trapani** → **Riserva dello Zingaro** (entrée sud, Scopello) · ⏱️ 50 min (40 min GPS + marge) · ~37 km
+- 🚗 **Alcamo** → **Riserva dello Zingaro** · ⏱️ 50 min (40 min GPS + marge) · ~40 km
   - 🥾 Randonnée côtière (sentier principal, ~2h aller)
   - 🌊 Baignade dans les criques turquoise (Cala dell'Uzzo, Cala Marinella)
   - Paysages préservés : maquis, falaises, eaux cristallines
-- 🚗 **Riserva dello Zingaro** → **Palerme** (zone aéroport) · ⏱️ 1h15 (1h GPS + marge) · ~55 km
+- 🚗 **Riserva dello Zingaro** → **Alcamo** · ⏱️ 50 min (40 min GPS + marge) · ~40 km
 - Soirée : dernier dîner sicilien tranquille
 
-> 🏨 **Nuit 12 : Palerme / aéroport**
+> 🏨 **Nuit 12 : Alcamo**
 
 ---
 
 ## ✈️ Jour 13 · Dim. 23 août – Retour
 
 - ✈️ 06:30 vol
-- 🚗 Départ hôtel ~03:30
+- 🚗 **Alcamo** → **Palerme aéroport** · ⏱️ 45 min (35 min GPS + marge) · ~45 km
+- Départ ~03:30
 
 ---
 
@@ -202,7 +200,7 @@
 
 | | |
 |---|---|
-| **Total** | ≈ 850 km |
+| **Total** | ≈ 920 km |
 | **Max / jour** | ~2h45 (avec marge) |
 | **Rythme** | Très raisonnable en famille |
 
@@ -211,10 +209,11 @@
 | Jour | Trajet | GPS | Estimé | Distance |
 |:----:|--------|:---:|:------:|:--------:|
 | 3 | Palerme → Cefalù | 1h | 1h15 | ~70 km |
-| 4 | Cefalù → Taormine | 2h15 | 2h45 | ~165 km |
-| 6 | Taormine → Rifugio Sapienza (Etna Sud) | 1h15 | 1h30 | ~50 km |
-| 6 | Rifugio Sapienza → Taormine (retour) | 1h15 | 1h30 | ~50 km |
-| 7 | Taormine → Catane (arrêt) | 1h | 1h15 | ~50 km |
+| 4 | Cefalù → Taormina | 2h15 | 2h45 | ~165 km |
+| 5 | Taormina → Nicolosi | 50 min | 1h10 | ~55 km |
+| 6 | Nicolosi → Rifugio Sapienza (Etna Sud) | 35 min | 45 min | ~20 km |
+| 6 | Rifugio Sapienza → Nicolosi (retour) | 35 min | 45 min | ~20 km |
+| 7 | Nicolosi → Catane | 20 min | 30 min | ~18 km |
 | 7 | Catane → Syracuse | 1h | 1h15 | ~60 km |
 | 8 | Syracuse → Noto (A/R) | 35 min | 45 min | ~33 km |
 | 8 | Noto → Syracuse (retour) | 35 min | 45 min | ~33 km |
@@ -222,21 +221,22 @@
 | 9 | Modica → Raguse | 20 min | 30 min | ~16 km |
 | 10 | Raguse → Agrigente | 2h | 2h30 | ~130 km |
 | 11 | Agrigente → Scala dei Turchi (Realmonte) | 20 min | 25 min | ~15 km |
-| 11 | Scala dei Turchi → Trapani | 2h | 2h30 | ~140 km |
-| 12 | Trapani → Riserva dello Zingaro (Scopello) | 40 min | 50 min | ~37 km |
-| 12 | Riserva dello Zingaro → Palerme (aéroport) | 1h | 1h15 | ~55 km |
+| 11 | Scala dei Turchi → Alcamo | 1h45 | 2h15 | ~130 km |
+| 12 | Alcamo → Riserva dello Zingaro | 40 min | 50 min | ~40 km |
+| 12 | Riserva dello Zingaro → Alcamo | 40 min | 50 min | ~40 km |
+| 13 | Alcamo → Palerme (aéroport) | 35 min | 45 min | ~45 km |
 
 > ⚠️ *Estimé = durée GPS + marge pour pauses, circulation (août), routes sinueuses siciliennes*
 
 ## 🏨 Récapitulatif hébergements (8 réservations Airbnb · 12 nuits)
 
-| # | Ville | Dates | Nuits | Check-in | Check-out |
-|:-:|-------|-------|:-----:|----------|-----------|
-| 1 | **Palerme** | Mar. 11 – Mer. 12 août | 2 | 11 août | 13 août |
-| 2 | **Cefalù** | Jeu. 13 août | 1 | 13 août | 14 août |
-| 3 | **Taormine** | Ven. 14 – Dim. 16 août | 3 | 14 août | 17 août |
-| 4 | **Syracuse** | Lun. 17 – Mar. 18 août | 2 | 17 août | 19 août |
-| 5 | **Ragusa** | Mer. 19 août | 1 | 19 août | 20 août |
-| 6 | **Agrigente** | Jeu. 20 août | 1 | 20 août | 21 août |
-| 7 | **Trapani** | Ven. 21 août | 1 | 21 août | 22 août |
-| 8 | **Palerme / aéroport** | Sam. 22 août | 1 | 22 août | 23 août |
+| # | Ville | Dates | Nuits | Check-in | Check-out | Adresse |
+|:-:|-------|-------|:-----:|----------|-----------|---------|
+| 1 | **Palerme** | Mar. 11 – Mer. 12 août | 2 | 11 août | 13 août | Via Pietro Amodei, 8, Palerme, Sicilia 90134, Italie |
+| 2 | **Cefalù** | Jeu. 13 août | 1 | 13 août | 14 août | Via Teresita Sandeschi, 2 piano terra, Cefalù, Sicilia 90015, Italie |
+| 3 | **Taormina** | Ven. 14 août | 1 | 14 août | 15 août | TODO: hébergement à réserver |
+| 4 | **Nicolosi** | Sam. 15 – Dim. 16 août | 2 | 15 août | 17 août | Viale Aldo Moro, 14/A Interno 8, Nicolosi, Sicile 95030, Italie |
+| 5 | **Syracuse** | Lun. 17 – Mar. 18 août | 2 | 17 août | 19 août | Via Carlo Forlanini, 3, Syracuse, Sicile 96100, Italie |
+| 6 | **Raguse** | Mer. 19 août | 1 | 19 août | 20 août | Corso Mazzini, 111, Raguse, Sicilia 97100, Italie |
+| 7 | **Agrigente** | Jeu. 20 août | 1 | 20 août | 21 août | Vicolo San Pietro, 10, Agrigente, Sicilia 92100, Italie |
+| 8 | **Alcamo** | Ven. 21 – Sam. 22 août | 2 | 21 août | 23 août | Via Perseo, 5, Alcamo, Sicile 91011, Italie |

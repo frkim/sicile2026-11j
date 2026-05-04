@@ -1,6 +1,6 @@
 const itinerary = {
   overview: {
-    totalKm: 850,
+    totalKm: 920,
     totalNights: 12,
     reservations: 8,
     maxDrive: "2h45",
@@ -9,7 +9,7 @@ const itinerary = {
       "Les durees de trajet incluent une marge de 15 a 30 min par rapport au temps GPS pour les pauses, la circulation estivale et les routes sinueuses.",
   },
   highlights: [
-    "🏛️ Palerme, Catane, Syracuse et Ragusa pour la dimension culturelle",
+    "🏛️ Palerme, Catane, Syracuse et Raguse pour la dimension culturelle",
     "🏖️ Cefalu, Isola Bella, Lido di Noto et Scala dei Turchi pour les plages",
     "🌋 Excursion complete a l'Etna avec telepherique et randonnee guidee",
     "🏨 8 hebergements seulement pour 12 nuits, avec un rythme optimise",
@@ -33,7 +33,7 @@ const itinerary = {
     },
   ],
   kpis: [
-    { label: "🛣️ Distance totale", value: "~850 km", detail: "validation des trajets incluse" },
+    { label: "🛣️ Distance totale", value: "~920 km", detail: "validation des trajets incluse" },
     { label: "⏱️ Duree max / jour", value: "2h45", detail: "avec marge de confort" },
     { label: "🏠 Reservations", value: "8", detail: "pour 12 nuits" },
     { label: "👨‍👩‍👧‍👦 Style de voyage", value: "Famille", detail: "culture, mer, nature" },
@@ -94,37 +94,37 @@ const itinerary = {
     {
       day: 5,
       date: "Sam. 15 aout",
-      title: "Taormine et Isola Bella",
-      stay: "Taormine",
-      themes: ["plage", "culture"],
+      title: "Taormine → Nicolosi",
+      stay: "Nicolosi",
+      themes: ["plage", "route"],
       items: [
         { text: "Theatre grec avec vue sur l'Etna et la mer", map: "Teatro Antico di Taormina, Sicily" },
         { text: "Descente vers Isola Bella pour plage et snorkeling", map: "Isola Bella, Taormina, Sicily" },
-        { text: "Villa Comunale et jardins ombrages", map: "Villa Comunale, Taormina, Sicily" },
-        { text: "Coucher de soleil depuis Piazza IX Aprile", map: "Piazza IX Aprile, Taormina, Sicily" },
+        { text: "Taormine → Nicolosi : 1h10, ~55 km" },
+        { text: "Installation a Nicolosi, au pied de l'Etna" },
       ],
     },
     {
       day: 6,
       date: "Dim. 16 aout",
       title: "Excursion Etna",
-      stay: "Taormine",
+      stay: "Nicolosi",
       themes: ["nature", "aventure"],
       items: [
-        { text: "Taormine → Rifugio Sapienza : 1h30, ~50 km", map: "Rifugio Sapienza, Etna, Sicily" },
+        { text: "Nicolosi → Rifugio Sapienza : 45 min, ~20 km", map: "Rifugio Sapienza, Etna, Sicily" },
         { text: "Telepherique jusqu'a 2 500 m puis randonnee guidee", map: "Funivia dell'Etna, Sicily" },
         { text: "Paysages de lave, crateres et panorama complet sur l'ile" },
-        { text: "Retour a Taormine en fin de journee" },
+        { text: "Retour a Nicolosi en fin de journee" },
       ],
     },
     {
       day: 7,
       date: "Lun. 17 aout",
-      title: "Taormine → Syracuse via Catane",
+      title: "Nicolosi → Syracuse via Catane",
       stay: "Syracuse",
       themes: ["route", "culture"],
       items: [
-        { text: "Taormine → Catane : 1h15, ~50 km" },
+        { text: "Nicolosi → Catane : 30 min, ~18 km" },
         { text: "Arret a Catane : marche aux poissons, Via Etnea, Piazza Duomo", map: "Piazza Duomo, Catania, Sicily" },
         { text: "Catane → Syracuse : 1h15, ~60 km" },
         { text: "Installation a Syracuse" },
@@ -146,24 +146,24 @@ const itinerary = {
     {
       day: 9,
       date: "Mer. 19 aout",
-      title: "Modica + Ragusa",
-      stay: "Ragusa",
+      title: "Modica + Raguse",
+      stay: "Raguse",
       themes: ["culture", "gastronomie"],
       items: [
         { text: "Syracuse → Modica : 1h30, ~70 km" },
         { text: "Degustation du chocolat de Modica chez Bonajuto", map: "Antica Dolceria Bonajuto, Modica, Sicily" },
-        { text: "Modica → Ragusa : 30 min, ~16 km" },
+        { text: "Modica → Raguse : 30 min, ~16 km" },
         { text: "Ragusa Ibla, Giardino Ibleo et diner en trattoria", map: "Ragusa Ibla, Sicily" },
       ],
     },
     {
       day: 10,
       date: "Jeu. 20 aout",
-      title: "Ragusa → Agrigente",
+      title: "Raguse → Agrigente",
       stay: "Agrigente",
       themes: ["route", "culture"],
       items: [
-        { text: "Route Ragusa → Agrigente : 2h30, ~130 km" },
+        { text: "Route Raguse → Agrigente : 2h30, ~130 km" },
         { text: "Vallee des Temples en fin de journee", map: "Valle dei Templi, Agrigento, Sicily" },
         { text: "Temple de la Concorde, Junon et Heracles", map: "Tempio della Concordia, Agrigento, Sicily" },
         { text: "Jardin de la Kolymbethra et lumiere doree au coucher du soleil", map: "Giardino della Kolymbethra, Agrigento, Sicily" },
@@ -172,26 +172,26 @@ const itinerary = {
     {
       day: 11,
       date: "Ven. 21 aout",
-      title: "Scala dei Turchi → Trapani",
-      stay: "Trapani",
+      title: "Scala dei Turchi → Alcamo",
+      stay: "Alcamo",
       themes: ["plage", "route"],
       items: [
         { text: "Agrigente → Scala dei Turchi : 25 min, ~15 km", map: "Scala dei Turchi, Sicily" },
         { text: "Falaises blanches et baignade si les conditions le permettent" },
-        { text: "Scala dei Turchi → Trapani : 2h30, ~140 km" },
-        { text: "Balade a Trapani et option coucher de soleil dans les salines", map: "Saline di Trapani, Sicily" },
+        { text: "Scala dei Turchi → Alcamo : 2h15, ~130 km" },
+        { text: "Installation a Alcamo et diner en centre-ville" },
       ],
     },
     {
       day: 12,
       date: "Sam. 22 aout",
-      title: "Zingaro → Palerme aeroport",
-      stay: "Palerme / aeroport",
+      title: "Zingaro et derniere journee",
+      stay: "Alcamo",
       themes: ["nature", "route"],
       items: [
-        { text: "Trapani → Riserva dello Zingaro : 50 min, ~37 km", map: "Riserva Naturale dello Zingaro, Sicily" },
+        { text: "Alcamo → Riserva dello Zingaro : 50 min, ~40 km", map: "Riserva Naturale dello Zingaro, Sicily" },
         { text: "Randonnee cotiere et baignade dans les criques" },
-        { text: "Zingaro → Palerme aeroport : 1h15, ~55 km" },
+        { text: "Retour a Alcamo en fin d'apres-midi" },
         { text: "Dernier diner sicilien au calme" },
       ],
     },
@@ -203,52 +203,56 @@ const itinerary = {
       themes: ["logistique"],
       items: [
         { text: "Vol a 06:30" },
-        { text: "Depart de l'hotel vers 03:30" },
+        { text: "Alcamo → Palerme aeroport : 45 min, ~45 km" },
+        { text: "Depart vers 03:30" },
       ],
     },
   ],
   routes: [
     [3, "Palerme → Cefalu", "1h", "1h15", "~70 km"],
-    [4, "Cefalu → Taormine", "2h15", "2h45", "~165 km"],
-    [6, "Taormine → Rifugio Sapienza (Etna Sud)", "1h15", "1h30", "~50 km"],
-    [6, "Rifugio Sapienza → Taormine (retour)", "1h15", "1h30", "~50 km"],
-    [7, "Taormine → Catane", "1h", "1h15", "~50 km"],
+    [4, "Cefalu → Taormina", "2h15", "2h45", "~165 km"],
+    [5, "Taormina → Nicolosi", "50 min", "1h10", "~55 km"],
+    [6, "Nicolosi → Rifugio Sapienza (Etna Sud)", "35 min", "45 min", "~20 km"],
+    [6, "Rifugio Sapienza → Nicolosi (retour)", "35 min", "45 min", "~20 km"],
+    [7, "Nicolosi → Catane", "20 min", "30 min", "~18 km"],
     [7, "Catane → Syracuse", "1h", "1h15", "~60 km"],
     [8, "Syracuse → Noto", "35 min", "45 min", "~33 km"],
     [8, "Noto → Syracuse", "35 min", "45 min", "~33 km"],
     [9, "Syracuse → Modica", "1h15", "1h30", "~70 km"],
-    [9, "Modica → Ragusa", "20 min", "30 min", "~16 km"],
-    [10, "Ragusa → Agrigente", "2h", "2h30", "~130 km"],
+    [9, "Modica → Raguse", "20 min", "30 min", "~16 km"],
+    [10, "Raguse → Agrigente", "2h", "2h30", "~130 km"],
     [11, "Agrigente → Scala dei Turchi", "20 min", "25 min", "~15 km"],
-    [11, "Scala dei Turchi → Trapani", "2h", "2h30", "~140 km"],
-    [12, "Trapani → Riserva dello Zingaro", "40 min", "50 min", "~37 km"],
-    [12, "Riserva dello Zingaro → Palerme aeroport", "1h", "1h15", "~55 km"],
+    [11, "Scala dei Turchi → Alcamo", "1h45", "2h15", "~130 km"],
+    [12, "Alcamo → Riserva dello Zingaro", "40 min", "50 min", "~40 km"],
+    [12, "Riserva dello Zingaro → Alcamo", "40 min", "50 min", "~40 km"],
+    [13, "Alcamo → Palerme aeroport", "35 min", "45 min", "~45 km"],
   ],
   stays: [
-    [1, "Palerme", "Mar. 11 - Mer. 12 aout", 2, "11 aout", "13 aout"],
-    [2, "Cefalu", "Jeu. 13 aout", 1, "13 aout", "14 aout"],
-    [3, "Taormine", "Ven. 14 - Dim. 16 aout", 3, "14 aout", "17 aout"],
-    [4, "Syracuse", "Lun. 17 - Mar. 18 aout", 2, "17 aout", "19 aout"],
-    [5, "Ragusa", "Mer. 19 aout", 1, "19 aout", "20 aout"],
-    [6, "Agrigente", "Jeu. 20 aout", 1, "20 aout", "21 aout"],
-    [7, "Trapani", "Ven. 21 aout", 1, "21 aout", "22 aout"],
-    [8, "Palerme / aeroport", "Sam. 22 aout", 1, "22 aout", "23 aout"],
+    [1, "Palerme", "Mar. 11 - Mer. 12 aout", 2, "11 aout", "13 aout", "Via Pietro Amodei, 8, Palerme, Sicilia 90134, Italie"],
+    [2, "Cefalu", "Jeu. 13 aout", 1, "13 aout", "14 aout", "Via Teresita Sandeschi, 2 piano terra, Cefalù, Sicilia 90015, Italie"],
+    [3, "Taormina", "Ven. 14 aout", 1, "14 aout", "15 aout", "TODO: hébergement à réserver"],
+    [4, "Nicolosi", "Sam. 15 - Dim. 16 aout", 2, "15 aout", "17 aout", "Viale Aldo Moro, 14/A Interno 8, Nicolosi, Sicile 95030, Italie"],
+    [5, "Syracuse", "Lun. 17 - Mar. 18 aout", 2, "17 aout", "19 aout", "Via Carlo Forlanini, 3, Syracuse, Sicile 96100, Italie"],
+    [6, "Raguse", "Mer. 19 aout", 1, "19 aout", "20 aout", "Corso Mazzini, 111, Raguse, Sicilia 97100, Italie"],
+    [7, "Agrigente", "Jeu. 20 aout", 1, "20 aout", "21 aout", "Vicolo San Pietro, 10, Agrigente, Sicilia 92100, Italie"],
+    [8, "Alcamo", "Ven. 21 - Sam. 22 aout", 2, "21 aout", "23 aout", "Via Perseo, 5, Alcamo, Sicile 91011, Italie"],
   ],
   mapStops: [
     { name: "Palerme", lat: 38.1157, lng: 13.3615, type: "night", day: "J1-J2", note: "Arrivee et deux premieres nuits" },
     { name: "Cefalu", lat: 38.0386, lng: 14.0229, type: "night", day: "J3", note: "Vieille ville et plage" },
-    { name: "Taormine", lat: 37.8516, lng: 15.2853, type: "night", day: "J4-J6", note: "Base pour Taormine et l'Etna" },
+    { name: "Taormina", lat: 37.8516, lng: 15.2853, type: "night", day: "J4", note: "Centre historique et Isola Bella" },
+    { name: "Nicolosi", lat: 37.6133, lng: 15.0253, type: "night", day: "J5-J6", note: "Base pour l'Etna" },
     { name: "Etna Sud", lat: 37.6997, lng: 14.9994, type: "visit", day: "J6", note: "Excursion volcan" },
     { name: "Catane", lat: 37.5079, lng: 15.083, type: "visit", day: "J7", note: "Pause culture et marche" },
     { name: "Syracuse", lat: 37.0755, lng: 15.2866, type: "night", day: "J7-J8", note: "Ortigia et base sud-est" },
     { name: "Noto", lat: 36.8924, lng: 15.0699, type: "visit", day: "J8", note: "Ville baroque" },
     { name: "Modica", lat: 36.8588, lng: 14.7601, type: "visit", day: "J9", note: "Chocolat et centre historique" },
-    { name: "Ragusa", lat: 36.9269, lng: 14.7255, type: "night", day: "J9", note: "Nuit a Ragusa" },
+    { name: "Raguse", lat: 36.9269, lng: 14.7255, type: "night", day: "J9", note: "Nuit a Raguse" },
     { name: "Agrigente", lat: 37.3111, lng: 13.5765, type: "night", day: "J10", note: "Vallee des Temples" },
     { name: "Scala dei Turchi", lat: 37.2899, lng: 13.4728, type: "visit", day: "J11", note: "Falaises blanches" },
-    { name: "Trapani", lat: 38.0176, lng: 12.5362, type: "night", day: "J11", note: "Nuit a Trapani" },
+    { name: "Alcamo", lat: 37.9789, lng: 12.9639, type: "night", day: "J11-J12", note: "Base pour Zingaro et depart" },
     { name: "Riserva dello Zingaro", lat: 38.1026, lng: 12.8075, type: "visit", day: "J12", note: "Randonnee et criques" },
-    { name: "Palerme aeroport", lat: 38.1759, lng: 13.091, type: "night", day: "J12-J13", note: "Derniere nuit et vol retour" },
+    { name: "Palerme aeroport", lat: 38.1759, lng: 13.091, type: "visit", day: "J13", note: "Vol retour" },
   ],
 };
 
@@ -678,7 +682,14 @@ function renderRoutes() {
 function renderStays() {
   staysTable.innerHTML = itinerary.stays
     .map(
-      ([index, city, dates, nights, checkIn, checkOut]) => `
+      ([index, city, dates, nights, checkIn, checkOut, address]) => {
+        const mapsUrl = address && !address.startsWith("TODO")
+          ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`
+          : null;
+        const addressCell = mapsUrl
+          ? `<a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">📍 ${address}</a>`
+          : address || "";
+        return `
         <tr>
           <td><strong>${index}</strong></td>
           <td>${city}</td>
@@ -686,8 +697,10 @@ function renderStays() {
           <td>${nights}</td>
           <td>${checkIn}</td>
           <td>${checkOut}</td>
+          <td>${addressCell}</td>
         </tr>
-      `,
+      `;
+      },
     )
     .join("");
 }
