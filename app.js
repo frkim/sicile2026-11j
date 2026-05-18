@@ -230,7 +230,7 @@ const itinerary = {
   stays: [
     [1, "Palerme", "Mar. 11 - Mer. 12 aout", 2, "11 aout", "13 aout", "Via Pietro Amodei, 8, Palerme, Sicilia 90134, Italie"],
     [2, "Cefalu", "Jeu. 13 aout", 1, "13 aout", "14 aout", "Via Teresita Sandeschi, 2 piano terra, Cefalù, Sicilia 90015, Italie"],
-    [3, "Taormina", "Ven. 14 aout", 1, "14 aout", "15 aout", "Via Paternò di Biscari, 5, Taormina, Sicilia 98039, Italie"],
+    [3, "Taormine", "Ven. 14 aout", 1, "14 aout", "15 aout", "Via Paternò di Biscari, 5, Taormina, Sicilia 98039, Italie"],
     [4, "Nicolosi", "Sam. 15 - Dim. 16 aout", 2, "15 aout", "17 aout", "Viale Aldo Moro, 14/A Interno 8, Nicolosi, Sicile 95030, Italie"],
     [5, "Syracuse", "Lun. 17 - Mar. 18 aout", 2, "17 aout", "19 aout", "Via Carlo Forlanini, 3, Syracuse, Sicile 96100, Italie"],
     [6, "Raguse", "Mer. 19 aout", 1, "19 aout", "20 aout", "Corso Mazzini, 111, Raguse, Sicilia 97100, Italie"],
