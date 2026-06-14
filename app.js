@@ -278,7 +278,7 @@ const itinerary = {
     {
       name: "Casa vacanze sull'Etna, \"Olivo\"",
       place: "Nicolosi",
-      mapsHref: "https://www.google.com/maps/place/Etna+Holiday+Home/@37.6148415,15.018671,1092m/data=!3m1!1e3!4m12!1m5!3m4!2zMzfCsDM2JzUzLjQiTiAxNcKwMDEnMDcuMiJF!8m2!3d37.6148415!4d15.018671!3m5!1s0x131155ee4ede1a85:0x9256e828ffcf66de!8m2!3d37.6155949!4d15.018679!16s%2Fg%2F119tb2g_w?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D",
+      mapsHref: "https://www.google.com/maps/place/Etna+Holiday+Home/@37.6146102,15.0184471,223a,35y,2.15h,20.91t/data=!3m1!1e3!4m6!3m5!1s0x131155ee4ede1a85:0x9256e828ffcf66de!8m2!3d37.6155949!4d15.018679!16s%2Fg%2F119tb2g_w?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D",
       airbnbHref: "https://www.airbnb.fr/rooms/177407",
       dates: "15 au 17 aout",
       nights: 2,
@@ -339,7 +339,7 @@ const itinerary = {
     { name: "Palerme", lat: 38.1157, lng: 13.3615, type: "night", day: "J1-J2", note: "Arrivee et deux premieres nuits" },
     { name: "Cefalu", lat: 38.0386, lng: 14.0229, type: "night", day: "J3", note: "Vieille ville et plage" },
     { name: "Taormina", lat: 37.8516, lng: 15.2853, type: "night", day: "J4", note: "Centre historique et Isola Bella" },
-    { name: "Nicolosi", lat: 37.6133, lng: 15.0253, type: "night", day: "J5-J6", note: "Base pour l'Etna" },
+    { name: "Nicolosi", lat: 37.6155949, lng: 15.018679, type: "night", day: "J5-J6", note: "Base pour l'Etna" },
     { name: "Etna Sud", lat: 37.6997, lng: 14.9994, type: "visit", day: "J6", note: "Excursion volcan" },
     { name: "Catane", lat: 37.5079, lng: 15.083, type: "visit", day: "J7", note: "Pause culture et marche" },
     { name: "Syracuse", lat: 37.0755, lng: 15.2866, type: "night", day: "J7-J8", note: "Ortigia et base sud-est" },
