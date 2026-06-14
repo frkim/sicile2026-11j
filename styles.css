@@ -30,6 +30,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: "Manrope", sans-serif;
   color: var(--ink-900);
   background:
@@ -501,7 +502,7 @@ a {
 
 .trip-map-popup-wrapper .leaflet-popup-content {
   margin: 0;
-  width: 360px !important;
+  width: min(360px, calc(100vw - 40px)) !important;
 }
 
 .trip-map-popup {
@@ -1647,7 +1648,7 @@ td strong {
   }
 
   .trip-map-popup-wrapper .leaflet-popup-content {
-    width: 280px !important;
+    width: min(300px, calc(100vw - 32px)) !important;
   }
 
   .trip-map-popup-media img {
@@ -1656,6 +1657,12 @@ td strong {
 
   .trip-map-popup-programs {
     max-height: 180px;
+  }
+
+  /* Keep the popup within the visible map height on phones */
+  .trip-map-popup {
+    max-height: min(70vh, 420px);
+    overflow-y: auto;
   }
 }
 
@@ -1694,6 +1701,10 @@ td strong {
 
   .trip-map {
     height: 320px;
+  }
+
+  .trip-map-popup-wrapper .leaflet-popup-content {
+    width: calc(100vw - 36px) !important;
   }
 
   .journey-image {
