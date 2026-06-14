@@ -864,7 +864,7 @@ itinerary.stays.forEach(([, city, , , , , address, mapQuery]) => {
 function renderStayPill(stayName) {
   const reservation = reservations[stayName];
   if (reservation) {
-    return `<button type="button" class="stay-pill stay-pill-button" data-reservation="${escapeHtml(stayName)}" aria-haspopup="dialog" title="Voir les details de la reservation">🏨 Nuit : ${escapeHtml(stayName)} <span class="stay-pill-cta">ℹ️ Details</span></button>`;
+    return `<button type="button" class="stay-pill stay-pill-button" data-reservation="${escapeHtml(stayName)}" aria-haspopup="dialog" title="Voir les details de la reservation">🏨 Nuit : ${escapeHtml(stayName)} <span class="stay-pill-cta">ℹ️ Détails</span></button>`;
   }
   const stay = stayAddressMap[stayName];
   if (stay) {
