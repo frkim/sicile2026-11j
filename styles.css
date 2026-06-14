@@ -1759,8 +1759,11 @@ td strong {
   position: relative;
   z-index: 1;
   width: min(680px, 100%);
+  max-width: 100%;
+  min-width: 0;
   max-height: 90vh;
   overflow-y: auto;
+  overflow-wrap: break-word;
   background: var(--sand-50);
   color: var(--ink-900);
   border-radius: 24px;
@@ -1855,12 +1858,16 @@ td strong {
   color: var(--ink-900);
   font-size: 0.95rem;
   line-height: 1.5;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .reservation-map-link {
   color: var(--coral-500);
   font-weight: 700;
   text-decoration: none;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .reservation-map-link:hover {
@@ -1929,5 +1936,21 @@ td strong {
 
   .reservation-row dt {
     font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reservation-modal {
+    padding: 8px;
+  }
+
+  .reservation-modal-dialog {
+    width: 100%;
+    padding: 20px 14px 22px;
+    border-radius: 16px;
+  }
+
+  .reservation-modal-header h3 {
+    font-size: 1.35rem;
   }
 }
