@@ -243,6 +243,7 @@ const itinerary = {
       name: "Paola Apartments 1",
       place: "Palerme",
       mapsHref: "https://www.google.com/maps/search/?api=1&query=38.1141109%2C13.3619997",
+      airbnbHref: "https://www.airbnb.fr/rooms/1193243393491900185",
       dates: "11 au 13 aout",
       nights: 2,
       perNight: 151.36,
@@ -254,6 +255,7 @@ const itinerary = {
       name: "Maison citron cefalù",
       place: "Cefalù",
       mapsHref: "https://www.google.com/maps/search/?api=1&query=38.03616940000001%2C14.021396",
+      airbnbHref: "https://www.airbnb.fr/rooms/1386219351913330576",
       dates: "13 au 14 aout",
       nights: 1,
       perNight: 250,
@@ -265,6 +267,7 @@ const itinerary = {
       name: "Maison familiale Turiddu",
       place: "Fiumefreddo di Sicilia",
       mapsHref: "https://www.google.com/maps/search/?api=1&query=37.7934%2C15.2160754",
+      airbnbHref: "https://www.airbnb.fr/rooms/1694723883846985719",
       dates: "14 au 15 aout",
       nights: 1,
       perNight: 161.38,
@@ -276,6 +279,7 @@ const itinerary = {
       name: "Casa vacanze sull'Etna, \"Olivo\"",
       place: "Nicolosi",
       mapsHref: "https://www.google.com/maps/place/Etna+Holiday+Home/@37.6148415,15.018671,1092m/data=!3m1!1e3!4m12!1m5!3m4!2zMzfCsDM2JzUzLjQiTiAxNcKwMDEnMDcuMiJF!8m2!3d37.6148415!4d15.018671!3m5!1s0x131155ee4ede1a85:0x9256e828ffcf66de!8m2!3d37.6155949!4d15.018679!16s%2Fg%2F119tb2g_w?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D",
+      airbnbHref: "https://www.airbnb.fr/rooms/177407",
       dates: "15 au 17 aout",
       nights: 2,
       perNight: 94.14,
@@ -287,6 +291,7 @@ const itinerary = {
       name: "PARC ARCHEOLOGIQUE PLAT",
       place: "Syracuse",
       mapsHref: "https://www.google.com/maps/search/?api=1&query=37.08068084716797%2C15.27458667755127",
+      airbnbHref: "https://www.airbnb.fr/rooms/1513635",
       dates: "17 au 19 aout",
       nights: 2,
       perNight: 131.56,
@@ -298,6 +303,7 @@ const itinerary = {
       name: "La Dimora di Angela",
       place: "Raguse",
       mapsHref: "https://www.google.com/maps/search/?api=1&query=36.9258986%2C14.7354065",
+      airbnbHref: "https://www.airbnb.fr/rooms/1350820231041655904",
       dates: "19 au 20 aout",
       nights: 1,
       perNight: 150.85,
@@ -352,6 +358,7 @@ const itinerary = {
 const reservations = {
   Palerme: {
     logement: "Paola Apartments 1",
+    airbnbUrl: "https://www.airbnb.fr/rooms/1193243393491900185",
     address: "Via Pietro Amodei, 8, Palermo, Sicilia 90134",
     mapQuery: "38.1141109,13.3619997",
     dates: "11 et 12 août (2 nuits)",
@@ -374,6 +381,7 @@ const reservations = {
   },
   Cefalu: {
     logement: "Logement entier : appartement | maison citron cefalù",
+    airbnbUrl: "https://www.airbnb.fr/rooms/1386219351913330576",
     address: "Via Teresita Sandeschi, 2 piano terra, Cefalù, Sicilia 90015, Italie",
     mapQuery: "38.03616940000001,14.021396",
     dates: "13 août (1 nuit) | jeu. 13 – ven. 14 août",
@@ -393,6 +401,7 @@ const reservations = {
   },
   Taormine: {
     logement: "Logement entier : appartement | Maison familiale Turiddu",
+    airbnbUrl: "https://www.airbnb.fr/rooms/1694723883846985719",
     address: "Via Badalà, 79, Fiumefreddo Sicilia, Sicilia 95013",
     mapQuery: "37.7934,15.2160754",
     dates: "14 août (1 nuit) : départ le 15 au matin | ven. 14 – sam. 15 août",
@@ -409,6 +418,7 @@ const reservations = {
   },
   Nicolosi: {
     logement: "Casa vacanze sull'Etna, \"Olivo\"",
+    airbnbUrl: "https://www.airbnb.fr/rooms/177407",
     address:
       "Viale Aldo Moro, 14/A (Aussi indiqué : Viale Aldo Moro Trav. 14 int. 8, 95030 Nicolosi (CT))",
     mapQuery: "37.61569955471903,15.018592178821564",
@@ -439,6 +449,7 @@ const reservations = {
   },
   Syracuse: {
     logement: "PARC ARCHÉOLOGIQUE PLAT",
+    airbnbUrl: "https://www.airbnb.fr/rooms/1513635",
     address:
       "Via Carlo Forlanini, 3 Syracuse, Sicily 96100 (Aussi écrit : Via Carlo Forlanini, 3 intercom A : Turismo in Sicilia / flat at 1st floor, Syracuse, Sicile 96100, Italie)",
     mapQuery: "37.08068084716797,15.27458667755127",
@@ -465,6 +476,7 @@ const reservations = {
   },
   Raguse: {
     logement: "Maison de vacances La Dimora di Angela",
+    airbnbUrl: "https://www.airbnb.fr/rooms/1350820231041655904",
     address: "Corso Mazzini, 111, Ragusa, Sicilia 97100",
     mapQuery: "36.9258986,14.7354065",
     parking:
@@ -978,6 +990,9 @@ function buildReservationModal(stayName) {
   const mapHref = r.mapUrl
     || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(r.mapQuery || r.address)}`;
   const mapRow = `<div class="reservation-row"><dt>Coordonnées / Itinéraire</dt><dd><a class="reservation-map-link" href="${mapHref}" target="_blank" rel="noopener noreferrer">🗺️ Ouvrir dans Google Maps</a></dd></div>`;
+  const airbnbRow = r.airbnbUrl
+    ? `<div class="reservation-row"><dt>Description en ligne</dt><dd><a class="reservation-map-link" href="${r.airbnbUrl}" target="_blank" rel="noopener noreferrer">🔗 Voir l'annonce Airbnb</a></dd></div>`
+    : "";
   const accessRow = r.access
     ? `<div class="reservation-row"><dt>Accès / Parkings</dt><dd><ul class="reservation-sublist">${r.access.map((a) => `<li>${escapeHtml(a)}</li>`).join("")}</ul></dd></div>`
     : "";
@@ -986,6 +1001,7 @@ function buildReservationModal(stayName) {
     reservationRow("Logement", r.logement),
     reservationRow("Adresse", r.address),
     mapRow,
+    airbnbRow,
     reservationRow("Mots-clés Google Maps", r.keywords),
     reservationRow("Coordonnées GPS", r.gps),
     reservationRow("Indications de l'hôte", r.directions),
@@ -1128,11 +1144,16 @@ function renderRoutes() {
 function renderStays() {
   staysTable.innerHTML = itinerary.accommodations
     .map(
-      ({ name, place, mapsHref, dates, nights }) => `
+      ({ name, place, mapsHref, airbnbHref, dates, nights }) => `
         <tr>
           <td><strong>${escapeHtml(name)}</strong></td>
           <td>${escapeHtml(place)}</td>
           <td><a href="${escapeHtml(mapsHref)}" target="_blank" rel="noopener noreferrer">📍 Lien Google Maps</a></td>
+          <td>${
+            airbnbHref
+              ? `<a href="${escapeHtml(airbnbHref)}" target="_blank" rel="noopener noreferrer">🔗 Voir l'annonce</a>`
+              : "—"
+          }</td>
           <td>${escapeHtml(dates)}</td>
           <td>${nights}</td>
         </tr>
