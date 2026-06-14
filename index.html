@@ -146,6 +146,7 @@
                       <th>GPS</th>
                       <th>Estime</th>
                       <th>Distance</th>
+                      <th>Itineraire</th>
                     </tr>
                   </thead>
                   <tbody id="routes-table"></tbody>
@@ -162,16 +163,42 @@
                 <table>
                   <thead>
                     <tr>
-                      <th>#</th>
-                      <th>Ville</th>
+                      <th>Nom du logement</th>
+                      <th>Lieu / Ville</th>
+                      <th>Lien Google Maps</th>
                       <th>Dates</th>
-                      <th>Nuits</th>
-                      <th>Check-in</th>
-                      <th>Check-out</th>
-                      <th>Adresse</th>
+                      <th>Nb de nuits</th>
                     </tr>
                   </thead>
                   <tbody id="stays-table"></tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="table-card" id="finances">
+              <div class="section-heading compact">
+                <p class="eyebrow">Budget 💶</p>
+                <h2>Recapitulatif financier des logements</h2>
+              </div>
+              <p class="caption table-note">
+                Note pour Fiumefreddo : n'ayant pas le detail exact du montant restant du par rapport au recu affiche,
+                il a ete considere comme entierement paye selon les precedentes notes.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Nom du logement</th>
+                      <th>Lieu</th>
+                      <th>Dates</th>
+                      <th>Nb nuits</th>
+                      <th>Montant / nuit</th>
+                      <th>Montant total</th>
+                      <th>Montant paye</th>
+                      <th>A venir</th>
+                    </tr>
+                  </thead>
+                  <tbody id="finances-table"></tbody>
                 </table>
               </div>
             </article>
@@ -187,6 +214,14 @@
         <img id="lightbox-image" alt="" />
         <figcaption id="lightbox-caption"></figcaption>
       </figure>
+    </div>
+
+    <div class="reservation-modal" id="reservation-modal" hidden role="dialog" aria-modal="true" aria-labelledby="reservation-modal-title">
+      <div class="reservation-modal-backdrop" data-reservation-close></div>
+      <div class="reservation-modal-dialog" role="document">
+        <button type="button" class="reservation-modal-close" id="reservation-modal-close" aria-label="Fermer">×</button>
+        <div class="reservation-modal-content" id="reservation-modal-content"></div>
+      </div>
     </div>
 
     <script

@@ -8,7 +8,7 @@ itinéraire jour par jour, carte interactive, trajets, hébergements et logistiq
 ## Contenu
 
 - `index.html` — structure de la page (hero, carte, programme, tableaux)
-- `app.js` — données de l'itinéraire et rendu dynamique (jours, carte Leaflet, lightbox)
+- `app.js` — données de l'itinéraire et rendu dynamique (jours, carte Leaflet, lightbox, popups réservations)
 - `styles.css` — design responsive (mobile / tablette / desktop)
 - `assets/day-images/` — photos d'illustration (`day-01.jpg` → `day-13.jpg`) + `credits.json`
 - `assets/sicile_flag.jpg` — drapeau utilisé dans le titre

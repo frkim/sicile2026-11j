@@ -230,12 +230,103 @@ const itinerary = {
   stays: [
     [1, "Palerme", "Mar. 11 - Mer. 12 aout", 2, "11 aout", "13 aout", "Via Pietro Amodei, 8, Palerme, Sicilia 90134, Italie"],
     [2, "Cefalu", "Jeu. 13 aout", 1, "13 aout", "14 aout", "Via Teresita Sandeschi, 2 piano terra, Cefalù, Sicilia 90015, Italie"],
-    [3, "Taormine", "Ven. 14 aout", 1, "14 aout", "15 aout", "Via Paternò di Biscari, 5, Taormina, Sicilia 98039, Italie"],
+    [3, "Taormine", "Ven. 14 aout", 1, "14 aout", "15 aout", "Family House Turiddu, Fiumefreddo di Sicilia, Sicilia, Italie", "37.7934,15.2160754"],
     [4, "Nicolosi", "Sam. 15 - Dim. 16 aout", 2, "15 aout", "17 aout", "Viale Aldo Moro, 14/A Interno 8, Nicolosi, Sicile 95030, Italie"],
     [5, "Syracuse", "Lun. 17 - Mar. 18 aout", 2, "17 aout", "19 aout", "Via Carlo Forlanini, 3, Syracuse, Sicile 96100, Italie"],
     [6, "Raguse", "Mer. 19 aout", 1, "19 aout", "20 aout", "Corso Mazzini, 111, Raguse, Sicilia 97100, Italie"],
     [7, "Agrigente", "Jeu. 20 aout", 1, "20 aout", "21 aout", "Vicolo San Pietro, 10, Agrigente, Sicilia 92100, Italie"],
     [8, "Alcamo", "Ven. 21 - Sam. 22 aout", 2, "21 aout", "23 aout", "Via Perseo, 5, Alcamo, Sicile 91011, Italie"],
+  ],
+  // Recapitulatif des logements (nom, lieu, lien Google Maps, dates, nuits) et budget associe.
+  accommodations: [
+    {
+      name: "Paola Apartments 1",
+      place: "Palerme",
+      mapsHref: "https://www.google.com/maps/search/?api=1&query=38.1141109%2C13.3619997",
+      dates: "11 au 13 aout",
+      nights: 2,
+      perNight: 151.36,
+      total: 302.72,
+      paid: 0,
+      due: 302.72,
+    },
+    {
+      name: "Maison citron cefalù",
+      place: "Cefalù",
+      mapsHref: "https://www.google.com/maps/search/?api=1&query=38.03616940000001%2C14.021396",
+      dates: "13 au 14 aout",
+      nights: 1,
+      perNight: 250,
+      total: 250,
+      paid: 0,
+      due: 250,
+    },
+    {
+      name: "Maison familiale Turiddu",
+      place: "Fiumefreddo di Sicilia",
+      mapsHref: "https://www.google.com/maps/search/?api=1&query=37.7934%2C15.2160754",
+      dates: "14 au 15 aout",
+      nights: 1,
+      perNight: 161.38,
+      total: 161.38,
+      paid: 161.38,
+      due: 0,
+    },
+    {
+      name: "Casa vacanze sull'Etna, \"Olivo\"",
+      place: "Nicolosi",
+      mapsHref: "https://www.google.com/maps/place/Etna+Holiday+Home/@37.6148415,15.018671,1092m/data=!3m1!1e3!4m12!1m5!3m4!2zMzfCsDM2JzUzLjQiTiAxNcKwMDEnMDcuMiJF!8m2!3d37.6148415!4d15.018671!3m5!1s0x131155ee4ede1a85:0x9256e828ffcf66de!8m2!3d37.6155949!4d15.018679!16s%2Fg%2F119tb2g_w?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D",
+      dates: "15 au 17 aout",
+      nights: 2,
+      perNight: 94.14,
+      total: 188.28,
+      paid: 0,
+      due: 188.28,
+    },
+    {
+      name: "PARC ARCHEOLOGIQUE PLAT",
+      place: "Syracuse",
+      mapsHref: "https://www.google.com/maps/search/?api=1&query=37.08068084716797%2C15.27458667755127",
+      dates: "17 au 19 aout",
+      nights: 2,
+      perNight: 131.56,
+      total: 263.11,
+      paid: 0,
+      due: 263.11,
+    },
+    {
+      name: "La Dimora di Angela",
+      place: "Raguse",
+      mapsHref: "https://www.google.com/maps/search/?api=1&query=36.9258986%2C14.7354065",
+      dates: "19 au 20 aout",
+      nights: 1,
+      perNight: 150.85,
+      total: 150.85,
+      paid: 0,
+      due: 150.85,
+    },
+    {
+      name: "« Où la ville se sent comme à la maison »",
+      place: "Agrigente",
+      mapsHref: "https://www.google.com/maps/search/?api=1&query=37.30970889999999%2C13.58433609325409",
+      dates: "20 au 21 aout",
+      nights: 1,
+      perNight: 136.82,
+      total: 136.82,
+      paid: 78.32,
+      due: 58.50,
+    },
+    {
+      name: "Appartement face à la mer (100 m)",
+      place: "Alcamo",
+      mapsHref: "https://www.google.com/maps/search/?api=1&query=38.026011701380405%2C12.928733559524526",
+      dates: "21 au 23 aout",
+      nights: 2,
+      perNight: 102.91,
+      total: 205.82,
+      paid: 0,
+      due: 205.82,
+    },
   ],
   mapStops: [
     { name: "Palerme", lat: 38.1157, lng: 13.3615, type: "night", day: "J1-J2", note: "Arrivee et deux premieres nuits" },
@@ -254,6 +345,206 @@ const itinerary = {
     { name: "Riserva dello Zingaro", lat: 38.1026, lng: 12.8075, type: "visit", day: "J12", note: "Randonnee et criques" },
     { name: "Palerme aeroport", lat: 38.1759, lng: 13.091, type: "visit", day: "J13", note: "Vol retour" },
   ],
+};
+
+// Donnees detaillees des reservations (hebergements), affichees en popup
+// pour chaque lieu du fil de voyage. Indexees par le nom d'etape (day.stay).
+const reservations = {
+  Palerme: {
+    logement: "Paola Apartments 1",
+    address: "Via Pietro Amodei, 8, Palermo, Sicilia 90134",
+    mapQuery: "38.1141109,13.3619997",
+    dates: "11 et 12 août (2 nuits)",
+    arrival: "15:00 - 21:00",
+    departure: "Avant 10:00",
+    arrivalType:
+      "Accueil par l'hôte. Contactez votre hôte pour connaître la procédure d'arrivée.",
+    extraRules:
+      "Si vous vous enregistrez après 21 h 00, un supplément est prévu ; de 21 h 00 à 24 h 00 de 15 € et de 24 h 00 à 2 h 00 de 30 €.",
+    booking: { label: "Numéro de réservation", value: "HMHJ8Z4KRC" },
+    payment: { total: "302,72 €", paid: "0,00 €", refund: "0,00 €" },
+    paymentLines: [
+      { label: "À venir", text: "Due 2 août | Visa 9860 | Palermo · 11 août–13 août | 302,72 € EUR" },
+    ],
+    cancellation: [
+      "Avant 10 août 15:00 : Remboursement intégral. Obtenez un remboursement de 100 % du montant que vous avez payé.",
+      "Avant 11 août 15:00 : Remboursement partiel. Obtenez le remboursement de toutes les nuits, à l'exception de la première. Aucun remboursement de la première nuit ni des frais de service.",
+      "Après 11 août 15:00 : Aucun remboursement. Cette réservation n'est pas remboursable.",
+    ],
+  },
+  Cefalu: {
+    logement: "Logement entier : appartement | maison citron cefalù",
+    address: "Via Teresita Sandeschi, 2 piano terra, Cefalù, Sicilia 90015, Italie",
+    mapQuery: "38.03616940000001,14.021396",
+    dates: "13 août (1 nuit) | jeu. 13 – ven. 14 août",
+    host: "Raffaele",
+    arrival: "15:00 - 01:00",
+    departure: "Avant 10:00",
+    arrivalType: "Arrivée autonome avec Boîte à clé sécurisée.",
+    booking: { label: "Numéro de réservation", value: "HMWXKPZM98" },
+    payment: { total: "250,00 €", paid: "0,00 €", refund: "0,00 €" },
+    paymentLines: [
+      { label: "À venir", text: "Due 4 août | Visa 9860 | Cefalù · 13 août–14 août | 250,00 € EUR" },
+    ],
+    cancellation: [
+      "Avant 12 août 15:00 : Remboursement intégral. Obtenez un remboursement de 100 % du montant que vous avez payé.",
+      "Après 12 août 15:00 : Aucun remboursement. Cette réservation n'est pas remboursable.",
+    ],
+  },
+  Taormine: {
+    logement: "Logement entier : appartement | Maison familiale Turiddu",
+    address: "Via Badalà, 79, Fiumefreddo Sicilia, Sicilia 95013",
+    mapQuery: "37.7934,15.2160754",
+    dates: "14 août (1 nuit) : départ le 15 au matin | ven. 14 – sam. 15 août",
+    host: "Family House Turiddu",
+    arrival: "15:00 - 20:00",
+    departure: "Avant 11:00",
+    arrivalType: "Contactez votre hôte pour connaître la procédure d'arrivée.",
+    booking: { label: "Numéro de reçu", value: "RCSFHR85XX", note: "Paiement effectué le 10 juin 2026" },
+    payment: { total: "161,38 €", paid: "161,38 €", refund: "161,38 €", status: "Effectué." },
+    cancellation: [
+      "Avant 9 août 15:00 : Remboursement intégral. Obtenez un remboursement de 100 % du montant que vous avez payé.",
+      "Après 9 août 15:00 : Aucun remboursement. Cette réservation n'est pas remboursable.",
+    ],
+  },
+  Nicolosi: {
+    logement: "Casa vacanze sull'Etna, \"Olivo\"",
+    address:
+      "Viale Aldo Moro, 14/A (Aussi indiqué : Viale Aldo Moro Trav. 14 int. 8, 95030 Nicolosi (CT))",
+    mapQuery: "37.61569955471903,15.018592178821564",
+    keywords: "« Etna Holiday Home, Nicolosi, CT »",
+    gps: "37.61569955471903 - 15.018592178821564",
+    directions:
+      "De Catane, suivre les indications pour « Paesi Etnei Circonvallazione Catania ». Une fois sur la « Tangenziale Catania » (très large route à deux voies), prendre la sortie « Gravina di Catania - Etna Sud », et continuer vers Mascalucia et Nicolosi. Une fois arrivé à Nicolosi : Depuis la place principale de la ville (Piazza Vittorio Emanuele, où se trouvent l'église principale, une fontaine et la mairie), continuer tout droit en direction du Nord jusqu'à un rond-point de distribution du trafic qui a au centre une fontaine. À ce stade, vous devez prendre la direction ouest, à votre gauche, le Viale della Regione, qui est une avenue bordée d'arbres. Viale Aldo Moro est le nom que prend cette avenue après un petit rond-point avec un olivier au centre. Vous devez continuer encore très peu, jusqu'au parking Calvario sur votre droite, et vous êtes pratiquement arrivés. En haut du parking, prenez la route à droite. J'habite dans la troisième villa sur la droite, il y a un jardin avec de grands arbres, la maison de vacances est la villa à côté (notre structure ressemble beaucoup).",
+    dates:
+      "15 et 16 août (2 nuits) : arrivée le 15 après-midi, départ le 17 au matin à 10:00 | Réservation du 15 août–17 août",
+    host: "Rosario",
+    contact:
+      "+39 3275427905 (Vous pouvez envoyer un message texte lorsque vous arrivez à Nicolosi ou pour toute information).",
+    arrival: "L'enregistrement peut avoir lieu à partir de 15h00.",
+    departure: "Le lundi 17 août à 10:00.",
+    arrivalType:
+      "L'hôte habite dans la maison voisine. Il est très important de lui faire connaître l'heure de votre arrivée, même approximativement, pour faciliter l'enregistrement. Question de l'hôte : À quelle heure pensez-vous arriver ?",
+    booking: { label: "Numéro de réservation", value: "HM83TQKH3A" },
+    paymentLines: [
+      { label: "À venir", text: "Due 2 août | Visa 9860 | Nicolosi · 15 août–17 août | 188,28 € EUR" },
+    ],
+    cancellationNote:
+      "Annulation gratuite avant le 10 août à 15:00. Si vous annulez avant l'arrivée prévue le 15 août à 15:00, vous aurez droit à un remboursement partiel.",
+    cancellation: [
+      "Avant 10 août 15:00 : Remboursement intégral. Obtenez un remboursement de 100 % du montant que vous avez payé.",
+      "Avant 15 août 15:00 : Remboursement partiel. Obtenez un remboursement de 50 % du prix de chaque nuit, à l'exception de la première. Aucun remboursement de la première nuit ni des frais de service.",
+      "Après 15 août 15:00 : Aucun remboursement. Cette réservation n'est pas remboursable.",
+    ],
+  },
+  Syracuse: {
+    logement: "PARC ARCHÉOLOGIQUE PLAT",
+    address:
+      "Via Carlo Forlanini, 3 Syracuse, Sicily 96100 (Aussi écrit : Via Carlo Forlanini, 3 intercom A : Turismo in Sicilia / flat at 1st floor, Syracuse, Sicile 96100, Italie)",
+    mapQuery: "37.08068084716797,15.27458667755127",
+    directions:
+      "Da aeroporto Fontanarossa Catania: Uscita Siracusa sud. Via Carlo Forlanini 3, 96100 Siracusa. Le numéro 3 est une grande copropriété (big condominium) avec un portail automatique gris (automatic gray gate). L'interphone est le A. Sonner à : \"Guerriero / Raddino / Turismo in Sicilia\".",
+    dates: "17 et 18 août (2 nuits) | lun. 17 – mer. 19 août",
+    host: "Alice",
+    arrival: "À partir de 15:00",
+    departure: "Avant 10:00",
+    arrivalType:
+      "Accueil par l'hôte. Contactez votre hôte pour connaître la procédure d'arrivée.",
+    booking: { label: "Numéro de réservation", value: "HM5WTTM3HA" },
+    payment: { total: "263,11 €", paid: "0,00 €", refund: "0,00 €" },
+    paymentLines: [
+      { label: "À venir", text: "Due 8 août | Visa 9860 | Syracuse · 17 août–19 août | 263,11 € EUR" },
+    ],
+    cancellationNote:
+      "Annulation gratuite avant le 16 août à 15:00. Si vous annulez avant l'arrivée prévue le 17 août à 15:00, vous aurez droit à un remboursement partiel.",
+    cancellation: [
+      "Avant 16 août 15:00 : Remboursement intégral. Obtenez un remboursement de 100 % du montant que vous avez payé.",
+      "Avant 17 août 15:00 : Remboursement partiel. Obtenez le remboursement de toutes les nuits, à l'exception de la première. Aucun remboursement de la première nuit ni des frais de service.",
+      "Après 17 août 15:00 : Aucun remboursement. Cette réservation n'est pas remboursable.",
+    ],
+  },
+  Raguse: {
+    logement: "Maison de vacances La Dimora di Angela",
+    address: "Corso Mazzini, 111, Ragusa, Sicilia 97100",
+    mapQuery: "36.9258986,14.7354065",
+    parking:
+      "Le parking est à 50 mètres de l'établissement, les clients seront accompagnés par le responsable de l'établissement au parking.",
+    dates: "19 août (1 nuit) | mer. 19 – jeu. 20 août",
+    host: "Angela",
+    arrival: "À partir de 14:00",
+    departure: "Avant 10:00",
+    arrivalType:
+      "Présence du responsable de l'établissement pour l'accompagnement au parking et à l'établissement.",
+    booking: { label: "Numéro de réservation", value: "HM83QXT98X" },
+    payment: { total: "150,85 €", paid: "0,00 €", refund: "0,00 €" },
+    paymentLines: [
+      { label: "À venir", text: "Due 10 août | Visa 9860 | Ragusa · 19 août–20 août | 150,85 € EUR" },
+    ],
+    cancellationNote:
+      "Annulation gratuite avant le 18 août à 14:00. Passé ce délai, la réservation n'est pas remboursable.",
+    cancellation: [
+      "Avant 18 août 14:00 : Remboursement intégral. Obtenez un remboursement de 100 % du montant que vous avez payé.",
+      "Après 18 août 14:00 : Aucun remboursement. Cette réservation n'est pas remboursable.",
+    ],
+  },
+  Agrigente: {
+    logement:
+      "Logement entier : appartement | « Où la ville se sent comme à la maison. À quelques pas de tout »",
+    address: "Vicolo San Pietro, 10 Agrigento, Sicilia 92100",
+    mapQuery: "37.30970889999999,13.58433609325409",
+    directions:
+      "Vicolo San Pietro est situé dans le centre historique, où l'accès en voiture est limité et les parkings sont rares. Je vous recommande de laisser votre voiture dans l'un des parkings à proximité suivants et de continuer à pied :",
+    access: [
+      "Parking Piazzale Rosselli : (850 m, 10 min à pied) Proximité de la gare routière et ferroviaire. Spacieux et pratique pour laisser la voiture et se déplacer à pied dans le centre historique.",
+      "Parking Pluripiano Via Empedocle : (500 m, 6 min à pied) Parking couvert et sécurisé.",
+      "Parking Via Pietro Nenni : (700 m, 9 min à pied) Alternative gratuite avec plus de places disponibles.",
+      "Depuis le parking jusqu'au Vicolo San Pietro 10 : Depuis n'importe lequel de ces parkings, vous pouvez rejoindre Vicolo San Pietro à pied en quelques minutes en traversant Via Atenea, la rue principale du centre historique. Une fois sur Via Atenea, tournez à droite dans Vicolo San Pietro et suivez la route jusqu'au numéro 10.",
+    ],
+    dates: "20 août (1 nuit) | jeu. 20 – ven. 21 août",
+    host: "Lucio",
+    arrival: "À partir de 15:00",
+    departure: "Avant 10:00",
+    arrivalType:
+      "Accueil par l'hôte. Contactez votre hôte pour connaître la procédure d'arrivée. Message de l'hôte : Si vous avez besoin de plus amples informations, n'hésitez pas à me le faire savoir !",
+    booking: { label: "Numéro de réservation", value: "HM3QB5TW3F" },
+    payment: { total: "136,82 €", paid: "78,32 €", refund: "78,32 €" },
+    paymentLines: [
+      { label: "Effectués", text: "Paiement effectué 3 mai | Visa 9860 | Agrigento · 20 août–21 août | 78,32 € EUR" },
+      { label: "À venir", text: "Due 5 août | Visa 9860 | Agrigento · 20 août–21 août | 58,50 € EUR" },
+    ],
+    cancellationNote:
+      "Annulation gratuite avant le 21 juillet à 15:00. Si vous annulez avant le 13 août à 15:00, vous aurez droit à un remboursement partiel.",
+    cancellation: [
+      "Avant 21 juil. 15:00 : Remboursement intégral. Obtenez un remboursement de 100 % du montant que vous avez payé.",
+      "Avant 13 août 15:00 : Remboursement partiel. Obtenez un remboursement de 50 % du prix de chaque nuit. Aucun remboursement des frais de service.",
+      "Après 13 août 15:00 : Aucun remboursement. Cette réservation n'est pas remboursable.",
+    ],
+  },
+  Alcamo: {
+    logement: "Appartement face à la mer (100 m) | appartamento fronte mare (100mt)",
+    address: "Via Perseo, 5 Alcamo, Sicily 91011",
+    mapQuery: "38.026011701380405,12.928733559524526",
+    directions:
+      "Par l'A29, sortie Castellammare del Golfo en direction d'Alcamo Marina, SS 187 dir. Palerme, au coin de la Via Perseo, juste avant l'église Stella Maris.",
+    dates: "21 et 22 août (2 nuits) : départ le 23 août | ven. 21 – dim. 23 août",
+    host: "Fabio",
+    arrival: "À partir de 14:00",
+    departure: "Avant 10:00",
+    arrivalType:
+      "Accueil par l'hôte. Contactez votre hôte pour connaître la procédure d'arrivée.",
+    booking: { label: "Numéro de réservation", value: "HMKKMQJBB5" },
+    payment: { total: "205,82 €", paid: "0,00 €", refund: "0,00 €" },
+    paymentLines: [
+      { label: "À venir", text: "Due 12 août | Visa 9860 | Alcamo · 21 août–23 août | 205,82 € EUR" },
+    ],
+    cancellationNote:
+      "Annulation gratuite avant le 20 août à 14:00. Si vous annulez avant l'arrivée prévue le 21 août à 14:00, vous aurez droit à un remboursement partiel.",
+    cancellation: [
+      "Avant 20 août 14:00 : Remboursement intégral. Obtenez un remboursement de 100 % du montant que vous avez payé.",
+      "Avant 21 août 14:00 : Remboursement partiel. Obtenez le remboursement de toutes les nuits, à l'exception de la première. Aucun remboursement de la première nuit ni des frais de service.",
+      "Après 21 août 14:00 : Aucun remboursement. Cette réservation n'est pas remboursable.",
+    ],
+  },
 };
 
 const dayImageMeta = {
@@ -362,6 +653,7 @@ const filterBar = document.querySelector("#filter-bar");
 const journeyGrid = document.querySelector("#journey-grid");
 const routesTable = document.querySelector("#routes-table");
 const staysTable = document.querySelector("#stays-table");
+const financesTable = document.querySelector("#finances-table");
 const servicePoints = document.querySelector("#service-points");
 
 function createMapIcon(type, label) {
@@ -655,19 +947,107 @@ function renderFilters() {
 }
 
 const stayAddressMap = {};
-itinerary.stays.forEach(([, city, , , , , address]) => {
+itinerary.stays.forEach(([, city, , , , , address, mapQuery]) => {
   if (address && !address.startsWith("TODO")) {
-    stayAddressMap[city] = address;
+    stayAddressMap[city] = { address, query: mapQuery || address };
   }
 });
 
 function renderStayPill(stayName) {
-  const address = stayAddressMap[stayName];
-  if (address) {
-    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+  const reservation = reservations[stayName];
+  if (reservation) {
+    return `<button type="button" class="stay-pill stay-pill-button" data-reservation="${escapeHtml(stayName)}" aria-haspopup="dialog" title="Voir les details de la reservation">🏨 Nuit : ${escapeHtml(stayName)} <span class="stay-pill-cta">ℹ️ Détails</span></button>`;
+  }
+  const stay = stayAddressMap[stayName];
+  if (stay) {
+    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stay.query)}`;
     return `<a class="stay-pill stay-pill-link" href="${url}" target="_blank" rel="noopener noreferrer" title="Voir l'hebergement sur Google Maps">🏨 Nuit : ${stayName} 📍</a>`;
   }
   return `<span class="stay-pill">🏨 Nuit : ${stayName}</span>`;
+}
+
+function reservationRow(label, value) {
+  if (!value) return "";
+  return `<div class="reservation-row"><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`;
+}
+
+function buildReservationModal(stayName) {
+  const r = reservations[stayName];
+  if (!r) return "";
+
+  const mapHref = r.mapUrl
+    || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(r.mapQuery || r.address)}`;
+  const mapRow = `<div class="reservation-row"><dt>Coordonnées / Itinéraire</dt><dd><a class="reservation-map-link" href="${mapHref}" target="_blank" rel="noopener noreferrer">🗺️ Ouvrir dans Google Maps</a></dd></div>`;
+  const accessRow = r.access
+    ? `<div class="reservation-row"><dt>Accès / Parkings</dt><dd><ul class="reservation-sublist">${r.access.map((a) => `<li>${escapeHtml(a)}</li>`).join("")}</ul></dd></div>`
+    : "";
+
+  const lieu = [
+    reservationRow("Logement", r.logement),
+    reservationRow("Adresse", r.address),
+    mapRow,
+    reservationRow("Mots-clés Google Maps", r.keywords),
+    reservationRow("Coordonnées GPS", r.gps),
+    reservationRow("Indications de l'hôte", r.directions),
+    reservationRow("Parking", r.parking),
+    accessRow,
+  ].join("");
+
+  const arrivee = [
+    reservationRow("Dates", r.dates),
+    reservationRow("Votre hôte", r.host),
+    reservationRow("Contact", r.contact),
+    reservationRow("Heure d'arrivée", r.arrival),
+    reservationRow("Heure de départ", r.departure),
+    reservationRow("Type d'arrivée", r.arrivalType),
+    reservationRow("Règles supplémentaires", r.extraRules),
+  ].join("");
+
+  const p = r.payment || {};
+  const paymentLines = (r.paymentLines || [])
+    .map((l) => `<li><span class="reservation-pay-tag">${escapeHtml(l.label)}</span> ${escapeHtml(l.text)}</li>`)
+    .join("");
+  const paiement = [
+    r.booking
+      ? reservationRow(r.booking.label, r.booking.value + (r.booking.note ? ` (${r.booking.note})` : ""))
+      : "",
+    reservationRow("Total initial", p.total),
+    reservationRow("Payé à ce jour", p.paid),
+    reservationRow("Montant total du remboursement", p.refund),
+    reservationRow("Statut", p.status),
+    paymentLines
+      ? `<div class="reservation-row"><dt>Échéances</dt><dd><ul class="reservation-sublist">${paymentLines}</ul></dd></div>`
+      : "",
+  ].join("");
+
+  const annulation = `
+    ${r.cancellationNote ? `<p class="reservation-note">${escapeHtml(r.cancellationNote)}</p>` : ""}
+    <ul class="reservation-cancellation">${(r.cancellation || []).map((c) => `<li>${escapeHtml(c)}</li>`).join("")}</ul>
+  `;
+
+  return `
+    <header class="reservation-modal-header">
+      <span class="reservation-modal-eyebrow">🏨 Hébergement</span>
+      <h3 id="reservation-modal-title">${escapeHtml(stayName)}</h3>
+      ${r.logement ? `<p class="reservation-modal-sub">${escapeHtml(r.logement)}</p>` : ""}
+    </header>
+    <section class="reservation-section">
+      <h4>📍 Lieu (adresse, coordonnées)</h4>
+      <dl>${lieu}</dl>
+    </section>
+    <section class="reservation-section">
+      <h4>🛎️ Procédure d'arrivée</h4>
+      <dl>${arrivee}</dl>
+    </section>
+    <section class="reservation-section">
+      <h4>💳 Paiement</h4>
+      <dl>${paiement}</dl>
+    </section>
+    <section class="reservation-section">
+      <h4>↩️ Annulation</h4>
+      ${annulation}
+    </section>
+  `;
 }
 
 function renderJourney() {
@@ -722,43 +1102,92 @@ function renderJourney() {
 function renderRoutes() {
   routesTable.innerHTML = itinerary.routes
     .map(
-      ([day, route, gps, estimated, distance]) => `
+      ([day, route, gps, estimated, distance]) => {
+        const [origin, destination] = String(route).split("→").map((part) => part.trim());
+        const directionsUrl = origin && destination
+          ? `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(`${origin}, Sicile`)}&destination=${encodeURIComponent(`${destination}, Sicile`)}`
+          : null;
+        const itineraryCell = directionsUrl
+          ? `<a href="${directionsUrl}" target="_blank" rel="noopener noreferrer" title="Ouvrir l'itineraire dans Google Maps">🧭 Itineraire</a>`
+          : "";
+        return `
         <tr>
           <td><strong>J${day}</strong></td>
           <td>${route}</td>
           <td>${gps}</td>
           <td>${estimated}</td>
           <td>${distance}</td>
+          <td>${itineraryCell}</td>
+        </tr>
+      `;
+      },
+    )
+    .join("");
+}
+
+function renderStays() {
+  staysTable.innerHTML = itinerary.accommodations
+    .map(
+      ({ name, place, mapsHref, dates, nights }) => `
+        <tr>
+          <td><strong>${escapeHtml(name)}</strong></td>
+          <td>${escapeHtml(place)}</td>
+          <td><a href="${escapeHtml(mapsHref)}" target="_blank" rel="noopener noreferrer">📍 Lien Google Maps</a></td>
+          <td>${escapeHtml(dates)}</td>
+          <td>${nights}</td>
         </tr>
       `,
     )
     .join("");
 }
 
-function renderStays() {
-  staysTable.innerHTML = itinerary.stays
+function formatEuro(amount) {
+  return `${amount.toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €`;
+}
+
+function renderFinances() {
+  if (!financesTable) return;
+  const totals = itinerary.accommodations.reduce(
+    (acc, { nights, total, paid, due }) => ({
+      nights: acc.nights + nights,
+      total: acc.total + total,
+      paid: acc.paid + paid,
+      due: acc.due + due,
+    }),
+    { nights: 0, total: 0, paid: 0, due: 0 },
+  );
+
+  const rows = itinerary.accommodations
     .map(
-      ([index, city, dates, nights, checkIn, checkOut, address]) => {
-        const mapsUrl = address && !address.startsWith("TODO")
-          ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`
-          : null;
-        const addressCell = mapsUrl
-          ? `<a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">📍 ${address}</a>`
-          : address || "";
-        return `
+      ({ name, place, dates, nights, perNight, total, paid, due }) => `
         <tr>
-          <td><strong>${index}</strong></td>
-          <td>${city}</td>
-          <td>${dates}</td>
+          <td><strong>${escapeHtml(name)}</strong></td>
+          <td>${escapeHtml(place)}</td>
+          <td>${escapeHtml(dates)}</td>
           <td>${nights}</td>
-          <td>${checkIn}</td>
-          <td>${checkOut}</td>
-          <td>${addressCell}</td>
+          <td>${formatEuro(perNight)}</td>
+          <td>${formatEuro(total)}</td>
+          <td>${formatEuro(paid)}</td>
+          <td>${formatEuro(due)}</td>
         </tr>
-      `;
-      },
+      `,
     )
     .join("");
+
+  const totalRow = `
+    <tr class="finances-total">
+      <td><strong>TOTAL DU SEJOUR</strong></td>
+      <td>—</td>
+      <td>—</td>
+      <td><strong>${totals.nights}</strong></td>
+      <td>—</td>
+      <td><strong>${formatEuro(totals.total)}</strong></td>
+      <td><strong>${formatEuro(totals.paid)}</strong></td>
+      <td><strong>${formatEuro(totals.due)}</strong></td>
+    </tr>
+  `;
+
+  financesTable.innerHTML = rows + totalRow;
 }
 
 function renderStrengths() {
@@ -782,6 +1211,7 @@ renderFilters();
 renderJourney();
 renderRoutes();
 renderStays();
+renderFinances();
 renderStrengths();
 renderMap();
 
@@ -820,5 +1250,53 @@ renderMap();
   });
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && !lightbox.hidden) close();
+  });
+})();
+
+// Popup reservations : clic sur une pastille "Nuit" du fil de voyage
+(function setupReservationModal() {
+  const modal = document.querySelector("#reservation-modal");
+  const content = document.querySelector("#reservation-modal-content");
+  const closeBtn = document.querySelector("#reservation-modal-close");
+  if (!modal || !content) return;
+
+  let lastTrigger = null;
+
+  function open(stayName, trigger) {
+    const html = buildReservationModal(stayName);
+    if (!html) return;
+    content.innerHTML = html;
+    content.scrollTop = 0;
+    modal.hidden = false;
+    document.body.style.overflow = "hidden";
+    lastTrigger = trigger || null;
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function close() {
+    modal.hidden = true;
+    content.innerHTML = "";
+    document.body.style.overflow = "";
+    if (lastTrigger && typeof lastTrigger.focus === "function") {
+      lastTrigger.focus();
+      lastTrigger = null;
+    }
+  }
+
+  document.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-reservation]");
+    if (!trigger) return;
+    event.preventDefault();
+    open(trigger.dataset.reservation, trigger);
+  });
+
+  if (closeBtn) closeBtn.addEventListener("click", close);
+  modal.addEventListener("click", (event) => {
+    if (event.target.closest("[data-reservation-close]") || event.target === modal) {
+      close();
+    }
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !modal.hidden) close();
   });
 })();
