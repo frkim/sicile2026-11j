@@ -1,6 +1,6 @@
 # 🗺️ Road trip Sicile – 11 au 23 août 2026
 
-> Version finale optimisée — 12 nuits, ~920 km
+> Version finale optimisée — 12 nuits, ~960 km
 
 > **📌 Note :** Les durées de trajet indiquées incluent une marge de 15 à 30 min par rapport au temps GPS, pour tenir compte des pauses, de la circulation estivale (août) et des routes sinueuses siciliennes.
 
@@ -200,7 +200,8 @@
 
 | | |
 |---|---|
-| **Total** | ≈ 920 km |
+| **Total** | ≈ 960 km |
+| **Temps de route** | ~19h30 (15h20 GPS + marge) |
 | **Max / jour** | ~2h45 (avec marge) |
 | **Rythme** | Très raisonnable en famille |
 
