@@ -237,6 +237,97 @@ const itinerary = {
     [7, "Agrigente", "Jeu. 20 aout", 1, "20 aout", "21 aout", "Vicolo San Pietro, 10, Agrigente, Sicilia 92100, Italie"],
     [8, "Alcamo", "Ven. 21 - Sam. 22 aout", 2, "21 aout", "23 aout", "Via Perseo, 5, Alcamo, Sicile 91011, Italie"],
   ],
+  // Recapitulatif des logements (nom, lieu, lien Google Maps, dates, nuits) et budget associe.
+  accommodations: [
+    {
+      name: "Paola Apartments 1",
+      place: "Palerme",
+      mapsHref: "https://www.google.com/maps/search/?api=1&query=38.1141109%2C13.3619997",
+      dates: "11 au 13 aout",
+      nights: 2,
+      perNight: 151.36,
+      total: 302.72,
+      paid: 0,
+      due: 302.72,
+    },
+    {
+      name: "Maison citron cefalù",
+      place: "Cefalù",
+      mapsHref: "https://www.google.com/maps/search/?api=1&query=38.03616940000001%2C14.021396",
+      dates: "13 au 14 aout",
+      nights: 1,
+      perNight: 250,
+      total: 250,
+      paid: 0,
+      due: 250,
+    },
+    {
+      name: "Maison familiale Turiddu",
+      place: "Fiumefreddo di Sicilia",
+      mapsHref: "https://www.google.com/maps/search/?api=1&query=37.7934%2C15.2160754",
+      dates: "14 au 15 aout",
+      nights: 1,
+      perNight: 161.38,
+      total: 161.38,
+      paid: 161.38,
+      due: 0,
+    },
+    {
+      name: "Casa vacanze sull'Etna, \"Olivo\"",
+      place: "Nicolosi",
+      mapsHref: "https://www.google.com/maps/place/Etna+Holiday+Home/@37.6148415,15.018671,1092m/data=!3m1!1e3!4m12!1m5!3m4!2zMzfCsDM2JzUzLjQiTiAxNcKwMDEnMDcuMiJF!8m2!3d37.6148415!4d15.018671!3m5!1s0x131155ee4ede1a85:0x9256e828ffcf66de!8m2!3d37.6155949!4d15.018679!16s%2Fg%2F119tb2g_w?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D",
+      dates: "15 au 17 aout",
+      nights: 2,
+      perNight: 94.14,
+      total: 188.28,
+      paid: 0,
+      due: 188.28,
+    },
+    {
+      name: "PARC ARCHEOLOGIQUE PLAT",
+      place: "Syracuse",
+      mapsHref: "https://www.google.com/maps/search/?api=1&query=37.08068084716797%2C15.27458667755127",
+      dates: "17 au 19 aout",
+      nights: 2,
+      perNight: 131.56,
+      total: 263.11,
+      paid: 0,
+      due: 263.11,
+    },
+    {
+      name: "La Dimora di Angela",
+      place: "Raguse",
+      mapsHref: "https://www.google.com/maps/search/?api=1&query=36.9258986%2C14.7354065",
+      dates: "19 au 20 aout",
+      nights: 1,
+      perNight: 150.85,
+      total: 150.85,
+      paid: 0,
+      due: 150.85,
+    },
+    {
+      name: "« Où la ville se sent comme à la maison »",
+      place: "Agrigente",
+      mapsHref: "https://www.google.com/maps/search/?api=1&query=37.30970889999999%2C13.58433609325409",
+      dates: "20 au 21 aout",
+      nights: 1,
+      perNight: 136.82,
+      total: 136.82,
+      paid: 78.32,
+      due: 58.50,
+    },
+    {
+      name: "Appartement face à la mer (100 m)",
+      place: "Alcamo",
+      mapsHref: "https://www.google.com/maps/search/?api=1&query=38.026011701380405%2C12.928733559524526",
+      dates: "21 au 23 aout",
+      nights: 2,
+      perNight: 102.91,
+      total: 205.82,
+      paid: 0,
+      due: 205.82,
+    },
+  ],
   mapStops: [
     { name: "Palerme", lat: 38.1157, lng: 13.3615, type: "night", day: "J1-J2", note: "Arrivee et deux premieres nuits" },
     { name: "Cefalu", lat: 38.0386, lng: 14.0229, type: "night", day: "J3", note: "Vieille ville et plage" },
@@ -562,6 +653,7 @@ const filterBar = document.querySelector("#filter-bar");
 const journeyGrid = document.querySelector("#journey-grid");
 const routesTable = document.querySelector("#routes-table");
 const staysTable = document.querySelector("#stays-table");
+const financesTable = document.querySelector("#finances-table");
 const servicePoints = document.querySelector("#service-points");
 
 function createMapIcon(type, label) {
@@ -1010,43 +1102,92 @@ function renderJourney() {
 function renderRoutes() {
   routesTable.innerHTML = itinerary.routes
     .map(
-      ([day, route, gps, estimated, distance]) => `
+      ([day, route, gps, estimated, distance]) => {
+        const [origin, destination] = String(route).split("→").map((part) => part.trim());
+        const directionsUrl = origin && destination
+          ? `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(`${origin}, Sicile`)}&destination=${encodeURIComponent(`${destination}, Sicile`)}`
+          : null;
+        const itineraryCell = directionsUrl
+          ? `<a href="${directionsUrl}" target="_blank" rel="noopener noreferrer" title="Ouvrir l'itineraire dans Google Maps">🧭 Itineraire</a>`
+          : "";
+        return `
         <tr>
           <td><strong>J${day}</strong></td>
           <td>${route}</td>
           <td>${gps}</td>
           <td>${estimated}</td>
           <td>${distance}</td>
+          <td>${itineraryCell}</td>
+        </tr>
+      `;
+      },
+    )
+    .join("");
+}
+
+function renderStays() {
+  staysTable.innerHTML = itinerary.accommodations
+    .map(
+      ({ name, place, mapsHref, dates, nights }) => `
+        <tr>
+          <td><strong>${escapeHtml(name)}</strong></td>
+          <td>${escapeHtml(place)}</td>
+          <td><a href="${escapeHtml(mapsHref)}" target="_blank" rel="noopener noreferrer">📍 Lien Google Maps</a></td>
+          <td>${escapeHtml(dates)}</td>
+          <td>${nights}</td>
         </tr>
       `,
     )
     .join("");
 }
 
-function renderStays() {
-  staysTable.innerHTML = itinerary.stays
+function formatEuro(amount) {
+  return `${amount.toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €`;
+}
+
+function renderFinances() {
+  if (!financesTable) return;
+  const totals = itinerary.accommodations.reduce(
+    (acc, { nights, total, paid, due }) => ({
+      nights: acc.nights + nights,
+      total: acc.total + total,
+      paid: acc.paid + paid,
+      due: acc.due + due,
+    }),
+    { nights: 0, total: 0, paid: 0, due: 0 },
+  );
+
+  const rows = itinerary.accommodations
     .map(
-      ([index, city, dates, nights, checkIn, checkOut, address, mapQuery]) => {
-        const mapsUrl = address && !address.startsWith("TODO")
-          ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery || address)}`
-          : null;
-        const addressCell = mapsUrl
-          ? `<a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">📍 ${address}</a>`
-          : address || "";
-        return `
+      ({ name, place, dates, nights, perNight, total, paid, due }) => `
         <tr>
-          <td><strong>${index}</strong></td>
-          <td>${city}</td>
-          <td>${dates}</td>
+          <td><strong>${escapeHtml(name)}</strong></td>
+          <td>${escapeHtml(place)}</td>
+          <td>${escapeHtml(dates)}</td>
           <td>${nights}</td>
-          <td>${checkIn}</td>
-          <td>${checkOut}</td>
-          <td>${addressCell}</td>
+          <td>${formatEuro(perNight)}</td>
+          <td>${formatEuro(total)}</td>
+          <td>${formatEuro(paid)}</td>
+          <td>${formatEuro(due)}</td>
         </tr>
-      `;
-      },
+      `,
     )
     .join("");
+
+  const totalRow = `
+    <tr class="finances-total">
+      <td><strong>TOTAL DU SEJOUR</strong></td>
+      <td>—</td>
+      <td>—</td>
+      <td><strong>${totals.nights}</strong></td>
+      <td>—</td>
+      <td><strong>${formatEuro(totals.total)}</strong></td>
+      <td><strong>${formatEuro(totals.paid)}</strong></td>
+      <td><strong>${formatEuro(totals.due)}</strong></td>
+    </tr>
+  `;
+
+  financesTable.innerHTML = rows + totalRow;
 }
 
 function renderStrengths() {
@@ -1070,6 +1211,7 @@ renderFilters();
 renderJourney();
 renderRoutes();
 renderStays();
+renderFinances();
 renderStrengths();
 renderMap();
 

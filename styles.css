@@ -1094,7 +1094,7 @@ a {
 }
 
 .tables-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .table-card {
@@ -1136,6 +1136,16 @@ th {
 
 td strong {
   font-weight: 800;
+}
+
+.table-note {
+  margin: -6px 0 16px;
+  font-style: italic;
+}
+
+.finances-total td {
+  border-top: 2px solid rgba(78, 101, 118, 0.35);
+  background: rgba(78, 101, 118, 0.06);
 }
 
 /* Image zoom button (overlay on journey images) */
