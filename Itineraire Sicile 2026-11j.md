@@ -67,7 +67,7 @@
   - Porta Messina → Porta Catania (traversée du centre)
 - 🍽️ Aperitivo avec vue sur la baie
 
-> 🏨 **Nuit 4 : Taormina**
+> 🏨 **Nuit 4 : Taormina** – Family House Turiddu, Fiumefreddo di Sicilia
 
 ---
 
@@ -234,7 +234,7 @@
 |:-:|-------|-------|:-----:|----------|-----------|---------|
 | 1 | **Palerme** | Mar. 11 – Mer. 12 août | 2 | 11 août | 13 août | Via Pietro Amodei, 8, Palerme, Sicilia 90134, Italie |
 | 2 | **Cefalù** | Jeu. 13 août | 1 | 13 août | 14 août | Via Teresita Sandeschi, 2 piano terra, Cefalù, Sicilia 90015, Italie |
-| 3 | **Taormina** | Ven. 14 août | 1 | 14 août | 15 août | TODO: hébergement à réserver |
+| 3 | **Taormina** | Ven. 14 août | 1 | 14 août | 15 août | Family House Turiddu, Fiumefreddo di Sicilia, Sicilia, Italie |
 | 4 | **Nicolosi** | Sam. 15 – Dim. 16 août | 2 | 15 août | 17 août | Viale Aldo Moro, 14/A Interno 8, Nicolosi, Sicile 95030, Italie |
 | 5 | **Syracuse** | Lun. 17 – Mar. 18 août | 2 | 17 août | 19 août | Via Carlo Forlanini, 3, Syracuse, Sicile 96100, Italie |
 | 6 | **Raguse** | Mer. 19 août | 1 | 19 août | 20 août | Corso Mazzini, 111, Raguse, Sicilia 97100, Italie |
