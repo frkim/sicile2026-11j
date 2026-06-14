@@ -1,6 +1,8 @@
 const itinerary = {
   overview: {
-    totalKm: 920,
+    totalKm: 960,
+    totalDrive: "19h30",
+    totalDriveGps: "15h20",
     totalNights: 12,
     reservations: 8,
     maxDrive: "2h45",
@@ -33,7 +35,8 @@ const itinerary = {
     },
   ],
   kpis: [
-    { label: "🛣️ Distance totale", value: "~920 km", detail: "validation des trajets incluse" },
+    { label: "🛣️ Distance totale", value: "~960 km", detail: "validation des trajets incluse" },
+    { label: "⏱️ Temps de route", value: "~19h30", detail: "cumul des trajets, marges incluses" },
     { label: "⏱️ Duree max / jour", value: "2h45", detail: "avec marge de confort" },
     { label: "🏠 Reservations", value: "8", detail: "pour 12 nuits" },
     { label: "👨‍👩‍👧‍👦 Style de voyage", value: "Famille", detail: "culture, mer, nature" },
@@ -912,6 +915,11 @@ function renderStats() {
       label: "🛣️ Total estime",
       value: `~${itinerary.overview.totalKm} km`,
       description: "distance globale sur l'ensemble du sejour",
+    },
+    {
+      label: "🚗 Temps de route",
+      value: `~${itinerary.overview.totalDrive}`,
+      description: "cumul estime des trajets, marges incluses",
     },
     {
       label: "🌙 Nuits",
