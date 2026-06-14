@@ -326,6 +326,7 @@ const itinerary = {
       name: "Appartement face à la mer (100 m)",
       place: "Alcamo",
       mapsHref: "https://www.google.com/maps/search/?api=1&query=38.026011701380405%2C12.928733559524526",
+      airbnbHref: "https://www.airbnb.fr/rooms/1664719404293292342",
       dates: "21 au 23 aout",
       nights: 2,
       perNight: 102.91,
@@ -534,6 +535,7 @@ const reservations = {
   },
   Alcamo: {
     logement: "Appartement face à la mer (100 m) | appartamento fronte mare (100mt)",
+    airbnbUrl: "https://www.airbnb.fr/rooms/1664719404293292342",
     address: "Via Perseo, 5 Alcamo, Sicily 91011",
     mapQuery: "38.026011701380405,12.928733559524526",
     directions:
