@@ -818,9 +818,12 @@ function renderMap() {
       title: stop.name,
     }).addTo(map);
 
+    const viewportWidth = window.innerWidth || document.documentElement.clientWidth || 400;
+    const popupMaxWidth = Math.min(360, Math.max(220, viewportWidth - 32));
     marker.bindPopup(buildStopPopup(stop, index), {
-      maxWidth: 400,
-      minWidth: 340,
+      maxWidth: popupMaxWidth,
+      minWidth: Math.min(260, popupMaxWidth),
+      autoPanPadding: [16, 16],
       className: "trip-map-popup-wrapper",
     });
     markers.push(marker);
