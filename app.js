@@ -318,6 +318,7 @@ const itinerary = {
       name: "« Où la ville se sent comme à la maison »",
       place: "Agrigente",
       mapsHref: "https://www.google.com/maps/search/?api=1&query=37.30970889999999%2C13.58433609325409",
+      airbnbHref: "https://www.airbnb.fr/rooms/1367370764178141616",
       dates: "20 au 21 aout",
       nights: 1,
       perNight: 136.82,
@@ -1182,18 +1183,16 @@ function formatEuro(amount) {
 function renderFinances() {
   if (!financesTable) return;
   const totals = itinerary.accommodations.reduce(
-    (acc, { nights, total, paid, due }) => ({
+    (acc, { nights, total }) => ({
       nights: acc.nights + nights,
       total: acc.total + total,
-      paid: acc.paid + paid,
-      due: acc.due + due,
     }),
-    { nights: 0, total: 0, paid: 0, due: 0 },
+    { nights: 0, total: 0 },
   );
 
   const rows = itinerary.accommodations
     .map(
-      ({ name, place, dates, nights, perNight, total, paid, due }) => `
+      ({ name, place, dates, nights, perNight, total }) => `
         <tr>
           <td><strong>${escapeHtml(name)}</strong></td>
           <td>${escapeHtml(place)}</td>
@@ -1201,8 +1200,6 @@ function renderFinances() {
           <td>${nights}</td>
           <td>${formatEuro(perNight)}</td>
           <td>${formatEuro(total)}</td>
-          <td>${formatEuro(paid)}</td>
-          <td>${formatEuro(due)}</td>
         </tr>
       `,
     )
@@ -1216,8 +1213,6 @@ function renderFinances() {
       <td><strong>${totals.nights}</strong></td>
       <td>—</td>
       <td><strong>${formatEuro(totals.total)}</strong></td>
-      <td><strong>${formatEuro(totals.paid)}</strong></td>
-      <td><strong>${formatEuro(totals.due)}</strong></td>
     </tr>
   `;
 
